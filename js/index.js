@@ -71,15 +71,11 @@ window.onload = function init(){
 
   /* 스크롤시 로고/이메일 줄어들음 */
   (function logo() {
-    $(window).scroll(function() {    
-      let scroll = $(window).scrollTop();
-      //console.log(scroll);
-      if (scroll >= 100) {
-        $(".srcollH1").addClass("logoActive");
-      } else {
-        $(".srcollH1").removeClass("logoActive");
-      }
-    });
+    let h1 = document.querySelector('.srcollH1');
+
+    addEventListener('scroll', () => {
+      scrollY >= 100 ? h1.classList.add('logoActive') : h1.classList.remove('logoActive');
+    })
   })();  
     
   /* 스킬 박스 */
