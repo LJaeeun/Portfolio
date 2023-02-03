@@ -180,19 +180,14 @@ window.onload = function init(){
   let img2 = document.querySelector('#img2');
   let img3 = document.querySelector('#img3');
   let img4 = document.querySelector('#img4');
-  console.log(img1.offsetTop);
-  console.log(img2.offsetTop);
-  console.log(img3.offsetTop);
-  console.log(img4.offsetTop);
-  let top1 = img1.offsetTop;
-  let top2 = img2.offsetTop;
-  let top3 = img3.offsetTop;
-  let top4 = img4.offsetTop;
+
+
 
   addEventListener('scroll', () => {
     // console.log(scrollY);
     if(scrollY > 2490) {
       ImgBox.style.transform = 'translateY(0)';
+      ImgBox.style.opacity = '1';
       if(scrollY >= 2510) {
         img1.style.opacity = '1';
         if(scrollY >= 3064) {
@@ -224,6 +219,7 @@ window.onload = function init(){
       }
     } else {
       ImgBox.style.transform = 'translateY(-150px)';
+      ImgBox.style.opacity = '0';
       img1.style.opacity = '0';
     }
   })

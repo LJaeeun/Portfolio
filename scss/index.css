@@ -650,6 +650,7 @@ body main .project .projectbox .imgbox {
   height: 15.625vw;
   transition: 1s;
   transform: translateY(-150px);
+  opacity: 0;
 }
 body main .project .projectbox .imgbox .img {
   opacity: 0;
