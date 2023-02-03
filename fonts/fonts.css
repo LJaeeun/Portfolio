@@ -1,73 +1,14 @@
 @charset "utf-8";
-/* 'NanumSquareR */
-/* @font-face {
-    font-family: 'NanumSquareR';
-    src: url(./fonts/NanumSquareR.woff) format('woff');
-    src: url(./fonts/NanumSquareR.woff2) format('woff2');
-    font-style: normal;
-    font-weight: 100 200 300 400 600 700 800 900;
-    font-display: swap;
+
+/* MonoplexKR-Regular */
+@font-face {
+  font-family: 'MonoplexKR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+  font-weight: 100 200 300 400 500 600 700 800;
 }
- */
-/*  { font-family: 'NanumSquare', sans-serif } */
+
+/* Pretendard */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css");
 /* 
-.normal		{ font-weight: 400 }
-.bold		{ font-weight: 700 }
-.bolder		{ font-weight: 800 }
-.light		{ font-weight: 300 }
+font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 */
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
-/* font-family: 'Source Sans Pro', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-
-/* 고댐 */
-/* @import url('https://fonts.cdnfonts.com/css/gotham'); */
-
-@font-face {
-  font-family: 'gotham';
-  src: url(./GothamMedium.woff) format('woff');
-  src: url(./GothamMedium.woff2) format('woff2');
-  font-style:normal;
-  font-weight:400;
-}
-@font-face {
-  font-family: 'gotham';
-  src: url(./GothamMedium_1.woff) format('woff');
-  src: url(./GothamMedium_1.woff2) format('woff2');
-  font-style:normal;
-  font-weight:400;
-}
-@font-face {
-  font-family: 'gotham';
-  src: url(./Gotham-Bold.woff) format('woff');
-  src: url(./Gotham-Bold.woff2) format('woff2');
-  font-style:normal;
-  font-weight:400;
-}
-@font-face {
-  font-family: 'gotham';
-  src: url(./GothamBold.woff) format('woff');
-  src: url(./GothamBold.woff2) format('woff2');
-  font-style:normal;
-  font-weight:400;
-}
-@font-face {
-  font-family: 'gotham';
-  src: url(./GothamBook.woff) format('woff');
-  src: url(./GothamBook.woff2) format('woff2');
-  font-style:normal;
-  font-weight:400;
-}
-
-
-@font-face{font-family:'gotham';font-style:italic;font-weight:400;src:local('Gotham'),url(https://fonts.cdnfonts.com/s/14898/GothamBookItalic.woff) format('woff')}@font-face{font-family:'gotham';font-style:normal;font-weight:300;src:local('Gotham'),url(https://fonts.cdnfonts.com/s/14898/GothamLight.woff) format('woff')}@font-face{font-family:'gotham';font-style:italic;font-weight:300;src:local('Gotham'),url(https://fonts.cdnfonts.com/s/14898/GothamLightItalic.woff) format('woff')}@font-face{font-family:'gotham';font-style:italic;font-weight:500;src:local('Gotham'),url(https://fonts.cdnfonts.com/s/14898/GothamMediumItalic.woff) format('woff')}@font-face{font-family:'gotham';font-style:italic;font-weight:700;src:local('Gotham'),url(https://fonts.cdnfonts.com/s/14898/GothamBoldItalic.woff) format('woff')}@font-face{font-family:'gotham' black;font-style:normal;font-weight:500;src:local('Gotham Black'),url(https://fonts.cdnfonts.com/s/14898/Gotham-Black.woff) format('woff')}
-@font-face{font-family:'gotham' light;font-style:normal;font-weight:500;src:local('Gotham Light'),url(https://fonts.cdnfonts.com/s/14898/Gotham-Light.woff) format('woff')}
-@font-face{font-family:'gotham' thin;font-style:normal;font-weight:500;src:local('Gotham Thin'),url(https://fonts.cdnfonts.com/s/14898/Gotham-Thin.woff) format('woff')}
-@font-face{font-family:'gotham' xlight;font-style:normal;font-weight:500;src:local('Gotham XLight'),url(https://fonts.cdnfonts.com/s/14898/Gotham-XLight.woff) format('woff')}
-@font-face{font-family:'gotham' book;font-style:italic;font-weight:500;src:local('Gotham Book'),url(https://fonts.cdnfonts.com/s/14898/Gotham-BookItalic.woff) format('woff')}
-@font-face{font-family:'gotham' thin;font-style:italic;font-weight:500;src:local('Gotham Thin'),url(https://fonts.cdnfonts.com/s/14898/Gotham-ThinItalic.woff) format('woff')}
-@font-face{font-family:'gotham' ultra;font-style:italic;font-weight:500;src:local('Gotham Ultra'),url(https://fonts.cdnfonts.com/s/14898/Gotham-UltraItalic.woff) format('woff')}
-@font-face{font-family:'gotham' xlight;font-style:italic;font-weight:500;src:local('Gotham XLight'),url(https://fonts.cdnfonts.com/s/14898/Gotham-XLightItalic.woff) format('woff')}
-
-
- 

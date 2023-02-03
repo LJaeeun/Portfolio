@@ -1,0 +1,970 @@
+@charset "UTF-8";
+html {
+  /* 밑색 */
+  background-color: #332b50;
+  /* 스크롤바 */
+  scroll-behavior: smooth;
+  margin: 0;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  width: 100%;
+  /* 마우스 커서 */
+  cursor: none;
+  /* 전체 기본 폰트 */
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /* 기본 색상 */
+  color: #FFFFFF;
+  /* 배경 이미지 */
+  background: url(../imgs/indexIMG/bg.png) no-repeat 50%/cover;
+  /* 배경 별 */
+  /* a태그 기본 */
+  /* 모든 h2 */
+  /* header */
+  /* 메인페이지(header제외) sidemenu */
+  /* main */
+  /* footer */
+}
+body .cursor {
+  pointer-events: none;
+}
+body .cursor .cursor__ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: color-dodge;
+  z-index: 1;
+}
+body .cursor .cursor__ball svg circle {
+  fill: rgba(255, 255, 255, 0.3);
+}
+body .estrela {
+  z-index: 9999999;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: estrela;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+body .estrela.style1 {
+  animation-duration: 0.5s;
+  animation-name: estrela;
+}
+body .estrela.style2 {
+  animation-duration: 1s;
+  animation-name: estrela;
+}
+body .estrela.style3 {
+  animation-duration: 1.5s;
+  animation-name: estrela;
+}
+body .estrela.style4 {
+  animation-duration: 2s;
+  animation-name: estrelaDestacada;
+}
+body .estrela.tam1 {
+  width: 1px;
+  height: 1px;
+}
+body .estrela.tam2 {
+  width: 2px;
+  height: 2px;
+}
+body .estrela.tam3 {
+  width: 3px;
+  height: 3px;
+}
+body .estrela.opacity1 {
+  opacity: 1;
+}
+body .estrela.opacity2 {
+  opacity: 0.5;
+}
+body .estrela.opacity3 {
+  opacity: 0.1;
+}
+@keyframes estrela {
+  0% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+  }
+}
+@keyframes estrelaDestacada {
+  0% {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 0px rgb(255, 255, 255);
+  }
+  20% {
+    background-color: #FFC4C4;
+    box-shadow: 0 0 10px 0px rgb(255, 196, 196);
+  }
+  80% {
+    background-color: #C4CFFF;
+    box-shadow: 0 0 10px 0px rgb(196, 207, 255);
+  }
+  100% {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+  }
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: none;
+}
+body h2 {
+  font-size: 4.688rem;
+  text-transform: uppercase;
+  font-family: "MonoplexKR", sans-serif;
+  letter-spacing: 50px;
+  text-align: center;
+  position: relative;
+  left: 50px;
+  margin-top: 10.625vw;
+  padding-top: 5vw;
+}
+body header {
+  width: 100%;
+  height: 100vh;
+  font-family: "MonoplexKR", sans-serif;
+  font-weight: 100;
+  /* header logo */
+  /* h1 로고 스크롤시 크기 줄어듬 */
+  /* header nav */
+  /* header rotate */
+  /* header 제목 */
+}
+body header h1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 0.3s;
+  z-index: 1;
+}
+body header h1 .flexBox {
+  display: flex;
+  padding: 2.5vw 2.5vw 0px;
+  justify-content: space-between;
+}
+body header h1 .flexBox .logo {
+  position: relative;
+}
+body header h1 .flexBox .logo a {
+  width: 3.125vw;
+  height: 3.125vw;
+  background: url(../imgs/indexIMG/logo.png) no-repeat 50%/cover;
+  transition: 0.5s;
+}
+body header h1 .flexBox .logo a:hover {
+  background-image: url(../imgs/indexIMG/logoHover.png);
+}
+body header h1 .flexBox .email {
+  font-size: 1.25rem;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 200;
+}
+body header h1 .flexBox .email a {
+  transition: 0.4s;
+}
+body header h1 .flexBox .email a:hover {
+  color: #FFE600;
+}
+body header .logoActive {
+  transition: 0.3s;
+}
+body header .logoActive .flexBox {
+  padding: 1.563vw 1.563vw 0px;
+}
+body header .logoActive .flexBox .logo a {
+  width: 2.083vw;
+  height: 2.083vw;
+}
+body header .logoActive .flexBox .email {
+  font-size: 1rem;
+}
+body header .header_nav {
+  position: relative;
+  z-index: 9;
+  float: right;
+  transform: translateY(405px) translateX(-39px);
+  font-size: 1.375rem;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 300;
+}
+body header .header_nav li a {
+  margin-bottom: 37px;
+  transition: 0.4s;
+}
+body header .header_nav li a:hover {
+  color: #FFE600;
+}
+body header .header_nav li:last-child a {
+  margin-bottom: 0px;
+}
+body header .header_rotate {
+  width: 52.083vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body header .header_rotate img {
+  width: 100%;
+  animation: header_rotate 12s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes header_rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body header p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.125rem;
+  text-align: center;
+}
+body header p span {
+  display: block;
+  font-size: 4.375rem;
+}
+body #sideNav {
+  position: fixed;
+  top: 50%;
+  right: 37px;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+}
+body #sideNav ul li {
+  padding-bottom: 2.604vw;
+  text-indent: -9999px;
+  /* 원형 메뉴바 */
+}
+body #sideNav ul li:last-child {
+  padding-bottom: 0;
+}
+body #sideNav ul li a {
+  width: 0.677vw;
+  height: 0.677vw;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.15s;
+  /* 메뉴바 마우스 오버시 별모양으로 바뀜 */
+}
+body #sideNav ul li a:hover {
+  width: 0.985vw;
+  height: 0.985vw;
+  background: url(../imgs/indexIMG/star-solid.svg) no-repeat 50%/cover;
+}
+body main {
+  /* skill */
+  /* project */
+}
+body main .skill .skillH2 {
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(-300px);
+}
+body main .skill .skillbox {
+  margin: 6.51vw 5.208vw 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-weight: 100;
+  position: relative;
+  justify-content: center;
+  gap: 2.604vw;
+  /* 텍스트 상자 번호 */
+  /* 별자리 모양 */
+  /* skill 설명 박스 */
+  /* icon  */
+  /* 텍스트 박스 마우스 오버시 색상 변경/ .titleLIs에 마우스 오버시 (HBox,JBox,RBox,DBox,GBox) 박스 클래스에 add됨 */
+}
+body main .skill .skillbox span {
+  margin-top: 1.042vw;
+}
+body main .skill .skillbox span strong {
+  color: #FFE600;
+}
+body main .skill .skillbox .star {
+  position: sticky;
+  top: 0px;
+  height: 850px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.28fr);
+  grid-auto-rows: 0.3fr;
+  justify-content: flex-end;
+  /* 별자리 부분 글자 */
+  /* 별자리 토대 글자 */
+  /* 별자리 icon과 글자 포지션 */
+  /* 별자리 icon과 글자 포지션 */
+  /* 별자리 icon과 글자 포지션 */
+  /* 별자리 icon과 글자 포지션 */
+  /* 별자리 icon과 글자 포지션 */
+}
+body main .skill .skillbox .star p {
+  display: grid;
+  align-items: flex-end;
+  font-size: 0.875rem;
+}
+body main .skill .skillbox .star .textsoild {
+  font-size: 9.375rem;
+  font-weight: 100;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+body main .skill .skillbox .star .HBox {
+  justify-self: center;
+  position: relative;
+}
+body main .skill .skillbox .star .HBox p {
+  transform: translateX(0px) translateY(13px);
+}
+body main .skill .skillbox .star .HBox .starBox .HStar1 {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+}
+body main .skill .skillbox .star .HBox .starBox .HStar2 {
+  position: absolute;
+  top: 65px;
+  left: 8px;
+}
+body main .skill .skillbox .star .HBox .starBox .HStar3 {
+  position: absolute;
+  top: 130px;
+  left: 9px;
+}
+body main .skill .skillbox .star .HBox .starBox .HStar4 {
+  position: absolute;
+  top: 14px;
+  left: 79px;
+}
+body main .skill .skillbox .star .HBox .starBox .HStar5 {
+  position: absolute;
+  top: 75px;
+  left: 79px;
+}
+body main .skill .skillbox .star .HBox .starBox .HStar6 {
+  position: absolute;
+  top: 120px;
+  left: 79px;
+}
+body main .skill .skillbox .star .JBox {
+  justify-self: center;
+  position: relative;
+}
+body main .skill .skillbox .star .JBox p {
+  transform: translateY(13px) translateX(-25px);
+}
+body main .skill .skillbox .star .JBox .JStar1 {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+}
+body main .skill .skillbox .star .JBox .JStar2 {
+  position: absolute;
+  top: 70px;
+  left: 48.5px;
+}
+body main .skill .skillbox .star .JBox .JStar3 {
+  position: absolute;
+  top: 100px;
+  left: 47px;
+}
+body main .skill .skillbox .star .JBox .JStar4 {
+  position: absolute;
+  top: 120px;
+  left: 26px;
+}
+body main .skill .skillbox .star .JBox .JStar5 {
+  position: absolute;
+  top: 100px;
+  left: -1px;
+}
+body main .skill .skillbox .star .RBox {
+  justify-self: center;
+  position: relative;
+}
+body main .skill .skillbox .star .RBox p {
+  transform: translateX(13px) translateY(13px);
+}
+body main .skill .skillbox .star .RBox .RStar1 {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+}
+body main .skill .skillbox .star .RBox .RStar2 {
+  position: absolute;
+  top: 24px;
+  left: 49px;
+}
+body main .skill .skillbox .star .RBox .RStar3 {
+  position: absolute;
+  top: 55px;
+  left: 67px;
+}
+body main .skill .skillbox .star .RBox .RStar4 {
+  position: absolute;
+  top: 72px;
+  left: 45px;
+}
+body main .skill .skillbox .star .RBox .RStar5 {
+  position: absolute;
+  top: 80px;
+  left: 9px;
+}
+body main .skill .skillbox .star .RBox .RStar6 {
+  position: absolute;
+  top: 118px;
+  left: 7.5px;
+}
+body main .skill .skillbox .star .RBox .RStar7 {
+  position: absolute;
+  top: 118px;
+  left: 69px;
+}
+body main .skill .skillbox .star .DBox {
+  justify-self: center;
+  position: relative;
+}
+body main .skill .skillbox .star .DBox p {
+  transform: translateX(10px) translateY(13px);
+}
+body main .skill .skillbox .star .DBox .DStar1 {
+  position: absolute;
+  top: 22px;
+  left: 4px;
+}
+body main .skill .skillbox .star .DBox .DStar2 {
+  position: absolute;
+  top: 25px;
+  left: 52px;
+}
+body main .skill .skillbox .star .DBox .DStar3 {
+  position: absolute;
+  top: 45px;
+  left: 77px;
+}
+body main .skill .skillbox .star .DBox .DStar4 {
+  position: absolute;
+  top: 65px;
+  left: 81px;
+}
+body main .skill .skillbox .star .DBox .DStar5 {
+  position: absolute;
+  top: 105px;
+  left: 77px;
+}
+body main .skill .skillbox .star .DBox .DStar6 {
+  position: absolute;
+  top: 125px;
+  left: 45px;
+}
+body main .skill .skillbox .star .DBox .DStar7 {
+  position: absolute;
+  top: 117px;
+  left: 8px;
+}
+body main .skill .skillbox .star .DBox .DStar8 {
+  position: absolute;
+  top: 75px;
+  left: 10.5px;
+}
+body main .skill .skillbox .star .GBox {
+  justify-self: center;
+  position: relative;
+}
+body main .skill .skillbox .star .GBox p {
+  transform: translateX(5px) translateY(13px);
+}
+body main .skill .skillbox .star .GBox .GStar1 {
+  position: absolute;
+  top: 55px;
+  left: 80px;
+}
+body main .skill .skillbox .star .GBox .GStar2 {
+  position: absolute;
+  top: 23px;
+  left: 47px;
+}
+body main .skill .skillbox .star .GBox .GStar3 {
+  position: absolute;
+  top: 34px;
+  left: 10px;
+}
+body main .skill .skillbox .star .GBox .GStar4 {
+  position: absolute;
+  top: 77px;
+  left: 5px;
+}
+body main .skill .skillbox .star .GBox .GStar5 {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+body main .skill .skillbox .star .GBox .GStar6 {
+  position: absolute;
+  top: 125px;
+  left: 45px;
+}
+body main .skill .skillbox .star .GBox .GStar7 {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+}
+body main .skill .skillbox .star .GBox .GStar8 {
+  position: absolute;
+  top: 80px;
+  left: 87px;
+}
+body main .skill .skillbox .star .GBox .GStar9 {
+  position: absolute;
+  top: 73px;
+  left: 45px;
+}
+body main .skill .skillbox .textbox {
+  height: 1100px;
+}
+body main .skill .skillbox .textbox ul {
+  width: 36.458vw;
+}
+body main .skill .skillbox .textbox ul .titleLIs {
+  height: 150px;
+  border-top: 0.7px solid #fff;
+  font-size: 1.25rem;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  justify-content: center;
+  padding: 1.563vw 0 1.563vw 0.521vw;
+}
+body main .skill .skillbox .textbox ul .titleLIs ol {
+  list-style: disc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.781vw;
+}
+body main .skill .skillbox .textbox ul .titleLIs ol li {
+  font-size: 1rem;
+}
+body main .skill .skillbox .textbox ul .titleLIs:last-child {
+  border-bottom: 0.7px solid #fff;
+}
+body main .skill .skillbox i {
+  opacity: 0;
+}
+body main .skill .skillbox .active i {
+  transition: all 0s;
+  transition-property: color;
+  color: #FFE600;
+}
+@keyframes starColor {
+  from {
+    opacity: 0;
+    color: #FFE600;
+  }
+  to {
+    opacity: 1;
+    color: #FFE600;
+  }
+}
+body main .skill .skillbox .active i:nth-child(1) {
+  animation: starColor 0.5s forwards;
+}
+body main .skill .skillbox .active i:nth-child(2) {
+  animation: starColor 0.5s forwards;
+}
+body main .skill .skillbox .active i:nth-child(3) {
+  animation: starColor 1s forwards;
+}
+body main .skill .skillbox .active i:nth-child(4) {
+  animation: starColor 2s forwards;
+}
+body main .skill .skillbox .active i:nth-child(5) {
+  animation: starColor 2.5s forwards;
+}
+body main .skill .skillbox .active i:nth-child(6) {
+  animation: starColor 2.5s forwards;
+}
+body main .skill .skillbox .active i:nth-child(7) {
+  animation: starColor 3s forwards;
+}
+body main .skill .skillbox .active i:nth-child(8) {
+  animation: starColor 4s forwards;
+}
+body main .skill .skillbox .active i:nth-child(9) {
+  animation: starColor 5s forwards;
+}
+body main .skill .skillbox .active p {
+  font-weight: 100;
+  color: #FFE600;
+}
+body main .skill .skillbox .active .textsoild {
+  color: rgba(255, 230, 0, 0.4);
+  font-weight: 100;
+  -webkit-text-stroke: 0px;
+}
+body main .project {
+  width: 100%;
+}
+body main .project h2 {
+  margin-bottom: 10vw;
+  transform: translateX(-30%);
+  transition: 1s;
+  opacity: 0;
+}
+body main .project .projectbox {
+  margin: 0 15.208vw 0px;
+  display: flex;
+  height: 88.542vw;
+  /* 프로젝트 대표 이미지 사진 부분 전체 적용 */
+  /* 텍스트 박스 */
+}
+body main .project .projectbox .imgbox {
+  position: sticky;
+  top: 50%;
+  width: 50%;
+  height: 5.625vw;
+  transition: 1s;
+  transform: translateY(-150px);
+}
+body main .project .projectbox .imgbox .img {
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.3s;
+  top: 0;
+  width: 35vw;
+}
+body main .project .projectbox .imgbox .img img {
+  display: block;
+  width: 100%;
+}
+body main .project .projectbox .textbox {
+  width: 40%;
+  margin-left: auto;
+}
+body main .project .projectbox .textbox .projectText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.042vw;
+  padding: 6.771vw 2.604vw;
+  /* 해당 사용 프로그램 표시하는 박스 */
+  /* 해당 프로젝트 제목 및 날짜 */
+  /* 해시태그 및 대표색상 */
+}
+body main .project .projectbox .textbox .projectText .borderbox ul {
+  display: flex;
+}
+body main .project .projectbox .textbox .projectText .borderbox ul li {
+  border: 0.052vw solid #fff;
+  padding: 0.26vw 0.469vw;
+  margin-right: 0.521vw;
+  font-size: 0.75rem;
+}
+body main .project .projectbox .textbox .projectText .titlebox {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1.302vw;
+  /* 제목 */
+  /* 날짜 */
+}
+body main .project .projectbox .textbox .projectText .titlebox h3 {
+  font-size: 2.375rem;
+  margin-right: 0.729vw;
+}
+body main .project .projectbox .textbox .projectText .titlebox p {
+  font-size: 0.75rem;
+  margin-bottom: 0.365vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox {
+  display: flex;
+  /* 해시태그 */
+  /* 대표 컬러 */
+}
+body main .project .projectbox .textbox .projectText .tagbox .tag {
+  margin-right: 1.563vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .tag h4 {
+  font-size: 1rem;
+  margin-bottom: 1.042vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox {
+  display: flex;
+}
+body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox a {
+  font-size: 1.125rem;
+  margin-right: 0.625vw;
+  transition: 0.3s;
+  position: relative;
+  z-index: 99;
+}
+body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox a:last-child {
+  margin-right: 0;
+}
+body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox a:hover {
+  color: #FFE600;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color h4 {
+  margin-bottom: 1.042vw;
+  font-size: 1rem;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox {
+  display: flex;
+  text-indent: -9999px;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color1 {
+  width: 1.042vw;
+  height: 1.042vw;
+  border: 0.052vw solid #fff;
+  border-radius: 50%;
+  margin-right: 0.625vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color2 {
+  width: 1.042vw;
+  height: 1.042vw;
+  border: 0.052vw solid #fff;
+  border-radius: 50%;
+  margin-right: 0.625vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color3 {
+  width: 1.042vw;
+  height: 1.042vw;
+  border: 0.052vw solid #fff;
+  border-radius: 50%;
+  margin-right: 0.625vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color4 {
+  width: 1.042vw;
+  height: 1.042vw;
+  border: 0.052vw solid #fff;
+  border-radius: 50%;
+}
+body footer {
+  position: relative;
+  /* 옆으로 움직이는 글자 */
+}
+body footer .contact {
+  height: 900px;
+  /* contact 메인 */
+}
+body footer .contact .contactflex {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 별자리 */
+  /* 간단 소개 */
+}
+body footer .contact .contactflex .staricon {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin-right: 200px;
+  /* 별모양 아이콘 포지션 */
+  /* 별자리 직선 포지션 */
+}
+body footer .contact .contactflex .staricon .icon {
+  /* 별 포지션 */
+  /* 별 포지션 */
+  /* 별 포지션 */
+  /* 별 포지션 */
+  /* 별 포지션 */
+  /* 별 포지션 */
+  /* 별 포지션 */
+  /* 별 포지션 */
+}
+body footer .contact .contactflex .staricon .icon i {
+  color: rgb(255, 230, 0);
+  box-shadow: 0px 0px 25px 5px rgba(255, 230, 0, 0.5);
+  opacity: 0;
+  animation: starani infinite;
+  animation-duration: 12s;
+}
+@keyframes starani {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body footer .contact .contactflex .staricon .icon .contactStar1 {
+  position: absolute;
+  top: 190px;
+  left: 11px;
+  transform: rotate(30deg);
+  animation-delay: 0s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar2 {
+  position: absolute;
+  top: 220px;
+  left: 40px;
+  transform: rotate(25deg);
+  animation-delay: 0.1s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar3 {
+  position: absolute;
+  top: 180px;
+  left: 125px;
+  transform: rotate(29deg);
+  animation-delay: 0.4s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar4 {
+  position: absolute;
+  top: 87px;
+  left: 200px;
+  transform: rotate(35deg);
+  animation-delay: 0.9s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar5 {
+  position: absolute;
+  top: 143px;
+  left: 343px;
+  transform: rotate(55deg);
+  animation-delay: 2s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar6 {
+  position: absolute;
+  top: 290px;
+  left: 310px;
+  transform: rotate(30deg);
+  animation-delay: 2.7s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar7 {
+  position: absolute;
+  top: 377px;
+  left: 155px;
+  transform: rotate(45deg);
+  animation-delay: 3.3s;
+}
+body footer .contact .contactflex .staricon .icon .contactStar8 {
+  position: absolute;
+  top: 400px;
+  left: 155px;
+  transform: rotate(45deg);
+  animation-delay: 3.5s;
+}
+body footer .contact .contactflex .staricon svg {
+  position: absolute;
+  top: 91px;
+  left: 36px;
+  transform: rotate(-10deg);
+}
+body footer .contact .contactflex .staricon .st0 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 6s linear infinite alternate;
+}
+body footer .contact .contactflex .staricon .st01 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash2 6s infinite alternate;
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash2 {
+  25% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+body footer .contact .contactflex .intro {
+  display: flex;
+  align-items: center;
+  gap: 3.906vw;
+  /* 소개 */
+  /* 카카오톡 오픈 채팅방 사진 */
+}
+body footer .contact .contactflex .intro .introTxt {
+  text-align: center;
+  /* 이름 */
+  /* 이메일 */
+}
+body footer .contact .contactflex .intro .introTxt h5 {
+  font-size: 1.875rem;
+  margin-bottom: 1.042vw;
+}
+body footer .contact .contactflex .intro .introTxt p {
+  font-size: 1rem;
+}
+body footer .contact .contactflex .intro .introTxt p a {
+  position: relative;
+  z-index: 99;
+}
+body footer .contact .contactflex .intro .introTxt p a:hover {
+  color: #FFE600;
+}
+body footer .contact .contactflex .intro .kakaoQR {
+  /* QR코드 */
+  /* 카카오톡 오픈 챗 글자 */
+}
+body footer .contact .contactflex .intro .kakaoQR .QRcode {
+  width: 8.958vw;
+}
+body footer .contact .contactflex .intro .kakaoQR .QRcode img {
+  width: 100%;
+}
+body footer .contact .contactflex .intro .kakaoQR p {
+  font-size: 0.75rem;
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 0.521vw;
+}
+body footer .rotateL {
+  overflow: hidden;
+  /* 움직이는 글자 */
+  /* 애니메이션 */
+}
+body footer .rotateL .rotateLetter {
+  font-size: 2.188rem;
+  position: absolute;
+  bottom: 3.646vw;
+  left: 1.042vw;
+  letter-spacing: 10px;
+  font-family: "MonoplexKR", sans-serif;
+  white-space: nowrap;
+  animation: rotateLetter 30s linear infinite;
+}
+@keyframes rotateLetter {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
