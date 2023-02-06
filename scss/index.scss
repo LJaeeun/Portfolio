@@ -1,25 +1,15 @@
 html {
-    /* 밑색 */
-    background-color: #332b50;
-
+    margin: 0;
+    position: relative;
     /* 스크롤바 */
     &::-webkit-scrollbar {
         width: 0;
         height: 0;
     }
     scroll-behavior: smooth;
-
-
-    margin: 0;
-    height: 100%;
-    max-width: 100%;
-    position: relative;
-    // overflow: hidden;
 }
 
-
 body {
-    width: 100%;
     /* 마우스 커서 */
     cursor: none;
     .cursor {
@@ -35,19 +25,14 @@ body {
                     fill: rgba(255, 255, 255,0.3);
                 }
             }
-            
         }
     } 
-
     /* 전체 기본 폰트 */
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-
     /* 기본 색상 */
     color: #FFFFFF;
-
     /* 배경 이미지 */
     background: url(../imgs/indexIMG/bg.png) no-repeat 50% / cover;
-
     /* 배경 별 */
     .estrela {
         z-index: 9999999;
@@ -67,7 +52,6 @@ body {
         &.opacity1 { opacity:  1; }
         &.opacity2 { opacity: .5; }
         &.opacity3 { opacity: .1; }
-
         @keyframes estrela {
             0% {
               box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
@@ -79,7 +63,6 @@ body {
               box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
             }
         }
-      
         @keyframes estrelaDestacada {
             0% {
               background-color: #FFFFFF;
@@ -98,9 +81,7 @@ body {
               box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
             }
         }
-    
     }
-
     /* a태그 기본 */
     a {
         text-decoration: none;
@@ -120,176 +101,136 @@ body {
         margin-top: 10.625vw;
         padding-top: 5vw;
     }
-
     /* header */
-header {
-    width: 100%;
-    height: 100vh;
-    font-family: "MonoplexKR", sans-serif;
-    font-weight: 100;
-
-    /* header logo */
-    h1 {
-        position: fixed;
+    header {
         width: 100%;
-        top: 0;
-        transition: .3s;
-        z-index: 1;
-
-        .flexBox {
-            display: flex;
-            padding: 2.500vw 2.500vw 0px;
-            justify-content: space-between;
-
-            // z-index: 9;
-            .logo {
-                position: relative;
-
-                // z-index: 9;
-                a {
-                    width: 3.125vw;
-                    height: 3.125vw;
-                    background: url(../imgs/indexIMG/logo.png) no-repeat 50% / cover;
-                    transition: .5s;
-
-                    &:hover {
-                        background-image: url(../imgs/indexIMG/logoHover.png);
-                    }
-                }
-            }
-
-            .email {
-                font-size: 1.25rem;
-                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-                font-weight: 200;
-
-                a {
-                    transition: .4s;
-
-                    &:hover {
-                        color:#FFE600;
-                    }
-                }
-            }
-        }
-    }
-
-    /* h1 로고 스크롤시 크기 줄어듬 */
-    .logoActive {
-        transition: .3s;
-
-        .flexBox {
-            padding: 1.563vw 1.563vw 0px;
-
-            .logo {
-                a {
-                    width: 2.083vw;
-                    height: 2.083vw;
-                }
-            }
-
-            .email {
-                font-size: 1rem;
-            }
-        }
-    }
-
-    /* header nav */
-    .header_nav {
-        position: relative;
-        z-index: 9;
-        float: right;
-        transform: translateY(405px) translateX(-39px);
-        font-size: 1.375rem;
-        text-transform: uppercase;
-        text-align: right;
-        font-weight: 300;
-
-        li {
-            a {
-                margin-bottom: 37px;
-                transition: .4s;
-
-                &:hover {
-                    color: #FFE600;
-                }
-            }
-
-            &:last-child {
-                a {
-                    margin-bottom: 0px;
-                }
-            }
-        }
-    }
-
-    /* header rotate */
-    .header_rotate {
-        width: 52.083vw;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        img {
+        height: 100vh;
+        font-family: "MonoplexKR", sans-serif;
+        font-weight: 100;
+        /* header logo */
+        h1 {
+            position: fixed;
             width: 100%;
-            animation: header_rotate 12s linear infinite;
-            transform-origin: 50% 50%;
+            top: 0;
+            transition: .3s;
+            z-index: 1;
+            .flexBox {
+                display: flex;
+                padding: 2.500vw 2.500vw 0px;
+                justify-content: space-between;
+                .logo {
+                    position: relative;
+                    a {
+                        width: 3.125vw;
+                        height: 3.125vw;
+                        background: url(../imgs/indexIMG/logo.png) no-repeat 50% / cover;
+                        transition: .5s;
+                        &:hover {
+                            background-image: url(../imgs/indexIMG/logoHover.png);
+                        }
+                    }
+                }
+                .email {
+                    font-size: 1.25rem;
+                    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                    font-weight: 200;
+                    a {
+                        transition: .4s;
+                        &:hover {
+                            color:#FFE600;
+                        }
+                    }
+                }
+            }
         }
-
-        @keyframes header_rotate {
-            100% {
-                transform: rotate(360deg);
+        /* h1 로고 스크롤시 크기 줄어듬 */
+        .logoActive {
+            transition: .3s;
+            .flexBox {
+                padding: 1.563vw 1.563vw 0px;
+                .logo {
+                    a {
+                        width: 2.083vw;
+                        height: 2.083vw;
+                    }
+                }
+                .email {
+                    font-size: 1rem;
+                }
+            }
+        }
+        /* header rotate */
+        .header_rotate {
+            width: 52.083vw;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            img {
+                width: 100%;
+                animation: header_rotate 12s linear infinite;
+                transform-origin: 50% 50%;
+            }
+            @keyframes header_rotate {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        /* header 제목 */
+        p {
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.125rem;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 4.375rem;
             }
         }
     }
-
-    /* header 제목 */
-    p {
-        position: absolute;
+    /* 메인페이지(header제외) sidemenu */
+    #sideNav {
+        position: fixed;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3.125rem;
-        text-align: center;
-
-        span {
-            display: block;
-            font-size: 4.375rem;
-        }
-    }
-}
-
-/* 메인페이지(header제외) sidemenu */
-#sideNav {
-    position: fixed;
-    top: 50%;
-    right: 37px;
-    transform: translateY(-50%);
-    z-index: 1;
-    opacity: 0;
-    transition: .5s;
-    ul {
-        li {
-            padding-bottom: 2.604vw;
-            text-indent: -9999px;
-
-            &:last-child {
-                padding-bottom: 0;
-            }
-
-            /* 원형 메뉴바 */
-            a {
-                width: 0.677vw;
-                height: 0.677vw;
-                background-color: #fff;
-                border-radius: 50%;
-                transition: .15s;
-
-                /* 메뉴바 마우스 오버시 별모양으로 바뀜 */
-                &:hover {
+        right: 37px;
+        transform: translateY(-50%);
+        z-index: 1;
+        opacity: 0;
+        transition: .5s;
+        ul {
+            li {
+                padding-bottom: 2.604vw;
+                text-indent: -9999px;
+                width: 0.985vw;
+                height: 0.985vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                /* 원형 메뉴바 */
+                a {
+                    width: 0.677vw;
+                    height: 0.677vw;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    transition: .15s;
+                    /* 메뉴바 마우스 오버시 별모양으로 바뀜 */
+                    &:hover {
+                        width: 0.985vw;
+                        height: 0.985vw;
+                        background: url(../imgs/indexIMG/star-solid.svg) no-repeat 50% / cover;
+                    }
+                }
+                /* 해당 지점 별모양 고정 */
+                .fixation {
                     width: 0.985vw;
                     height: 0.985vw;
                     background: url(../imgs/indexIMG/star-solid.svg) no-repeat 50% / cover;
@@ -297,810 +238,691 @@ header {
             }
         }
     }
-}
-/* main */
-main {
-    /* skill */
-    .skill {
-        .skillH2 {
-            opacity: 0;
-            transition: .3s;
-            transform: translateY(-300px);
-        }
-        .skillbox {
-            margin: 6.510vw 5.208vw 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            font-weight: 100;
-            position: relative;
-            justify-content: center;
-            gap: 2.604vw;
-
-            /* 텍스트 상자 번호 */
-            span {
-                margin-top: 1.042vw;
-                strong {
-                    color: #FFE600;
-                }
+    /* main */
+    main {
+        /* skill */
+        .skill {
+            .skillH2 {
+                opacity: 0;
+                transition: .3s;
+                transform: translateY(-300px);
             }
-
-            /* 별자리 모양 */
-            .star {
-                position: sticky;
-                top: 0px;
-                height: 850px;
+            .skillbox {
+                margin: 6.510vw 5.208vw 0;
                 display: grid;
-                grid-template-columns: repeat(3, 0.28fr);
-                grid-auto-rows: 0.3fr;
-                justify-content: flex-end;
-
-                /* 별자리 부분 글자 */
-                p {
-                    display: grid;
-                    align-items: flex-end;
-                    font-size: 0.875rem;
-                }
-
-                /* 별자리 토대 글자 */
-                .textsoild {
-                    font-size: 9.375rem;
-                    font-weight: 100;
-                    color: transparent;
-                    -webkit-text-stroke: 1px #fff;
-                }
-
-
-                /* 별자리 icon과 글자 포지션 */
-                .HBox {
-                    justify-self: center;
-                    position: relative;
-                    p {
-                        transform: translateX(0px)translateY(13px);
+                grid-template-columns: repeat(2, 1fr);
+                font-weight: 100;
+                position: relative;
+                justify-content: center;
+                gap: 2.604vw;
+                /* 텍스트 상자 번호 */
+                span {
+                    margin-top: 1.042vw;
+                    strong {
+                        color: #FFE600;
                     }
-                    .starBox {
-                        
-                        .HStar1 {
+                }
+                /* 별자리 모양 */
+                .star {
+                    position: sticky;
+                    top: 0px;
+                    height: 850px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 0.28fr);
+                    grid-auto-rows: 0.3fr;
+                    justify-content: flex-end;
+                    /* 별자리 부분 글자 */
+                    p {
+                        display: grid;
+                        align-items: flex-end;
+                        font-size: 0.875rem;
+                    }
+                    /* 별자리 토대 글자 */
+                    .textsoild {
+                        font-size: 150px;
+                        font-weight: 100;
+                        color: transparent;
+                        -webkit-text-stroke: 1px #fff;
+                    }
+                    /* 별자리 icon과 글자 포지션 */
+                    .HBox {
+                        justify-self: center;
+                        position: relative;
+                        p {
+                            transform: translateX(0px)translateY(13px);
+                        }
+                        .starBox {
+                            .HStar1 {
+                                position: absolute;
+                                top: 20px;
+                                left: 5px;
+                            }
+                            .HStar2 {
+                                position: absolute;
+                                top: 65px;
+                                left: 8px;
+                            }
+                            .HStar3 {
+                                position: absolute;
+                                top: 130px;
+                                left: 9px;
+                            }   
+                            .HStar4 {
+                                position: absolute;
+                                top: 14px;
+                                left: 79px;
+                            }  
+                            .HStar5 {
+                                position: absolute;
+                                top: 75px;
+                                left: 79px;
+                            }
+                            .HStar6 {
+                                position: absolute;
+                                top: 120px;
+                                left: 79px;
+                            }
+                        }
+                    }
+                    /* 별자리 icon과 글자 포지션 */
+                    .JBox {
+                        justify-self: center;
+                        position: relative;
+                        p {
+                            transform: translateY(13px) translateX(-25px);
+                        }
+                        .JStar1 {
+                            position: absolute;
+                            top: 20px;
+                            left: 45px;
+                        }
+                        .JStar2 {
+                            position: absolute;
+                            top: 70px;
+                            left: 48.5px;
+                        }
+                        .JStar3 {
+                            position: absolute;
+                            top: 100px;
+                            left: 47px;
+                        }
+                        .JStar4 {
+                            position: absolute;
+                            top: 120px;
+                            left: 26px;
+                        }
+                        .JStar5 {
+                            position: absolute;
+                            top: 100px;
+                            left: -1px;
+                        }
+                    }
+                    /* 별자리 icon과 글자 포지션 */
+                    .RBox {
+                        justify-self: center;
+                        position: relative;
+                        p {
+                            transform: translateX(13px)translateY(13px);
+                        }
+                        .RStar1 {
                             position: absolute;
                             top: 20px;
                             left: 5px;
                         }
-    
-                        .HStar2 {
+                        .RStar2 {
                             position: absolute;
-                            top: 65px;
-                            left: 8px;
+                            top: 24px;
+                            left: 49px;
                         }
-    
-                        .HStar3 {
+                        .RStar3 {
                             position: absolute;
-                            top: 130px;
+                            top: 55px;
+                            left: 67px;
+                        }
+                        .RStar4 {
+                            position: absolute;
+                            top: 72px;
+                            left: 45px;
+                        }
+                        .RStar5 {
+                            position: absolute;
+                            top: 80px;
                             left: 9px;
                         }
-    
-                        .HStar4 {
+                        .RStar6 {
                             position: absolute;
-                            top: 14px;
-                            left: 79px;
+                            top: 118px;
+                            left: 7.5px;
                         }
-    
-                        .HStar5 {
+                        .RStar7 {
+                            position: absolute;
+                            top: 118px;
+                            left: 69px;
+                        }
+                    }
+                    /* 별자리 icon과 글자 포지션 */
+                    .DBox {
+                        justify-self: center;
+                        position: relative;
+                        p {
+                            transform: translateX(10px)translateY(13px);
+                        }
+                        .DStar1 {
+                            position: absolute;
+                            top: 22px;
+                            left: 4px;
+                        }
+                        .DStar2 {
+                            position: absolute;
+                            top: 25px;
+                            left: 52px;
+                        }
+                        .DStar3 {
+                            position: absolute;
+                            top: 45px;
+                            left: 77px;
+                        }
+                        .DStar4 {
+                            position: absolute;
+                            top: 65px;
+                            left: 81px;
+                        }
+                        .DStar5 {
+                            position: absolute;
+                            top: 105px;
+                            left: 77px;
+                        }
+                        .DStar6 {
+                            position: absolute;
+                            top: 125px;
+                            left: 45px;
+                        }
+                        .DStar7 {
+                            position: absolute;
+                            top: 117px;
+                            left: 8px;
+                        }
+                        .DStar8 {
                             position: absolute;
                             top: 75px;
-                            left: 79px;
+                            left: 10.5px;
                         }
-    
-                        .HStar6 {
+                    }
+                    /* 별자리 icon과 글자 포지션 */
+                    .GBox {
+                        justify-self: center;
+                        position: relative;
+                        p {
+                            transform: translateX(5px)translateY(13px);
+                        }
+                        .GStar1 {
                             position: absolute;
-                            top: 120px;
-                            left: 79px;
+                            top: 55px;
+                            left: 80px;
+                        }
+                        .GStar2 {
+                            position: absolute;
+                            top: 23px;
+                            left: 47px;
+                        }
+                        .GStar3 {
+                            position: absolute;
+                            top: 34px;
+                            left: 10px;
+                        }
+                        .GStar4 {
+                            position: absolute;
+                            top: 77px;
+                            left: 5px;
+                        }
+                        .GStar5 {
+                            position: absolute;
+                            top: 100px;
+                            left: 10px;
+                        }
+                        .GStar6 {
+                            position: absolute;
+                            top: 125px;
+                            left: 45px;
+                        }
+                        .GStar7 {
+                            position: absolute;
+                            top: 100px;
+                            left: 80px;
+                        }
+                        .GStar8 {
+                            position: absolute;
+                            top: 80px;
+                            left: 87px;
+                        }
+                        .GStar9 {
+                            position: absolute;
+                            top: 73px;
+                            left: 45px;
                         }
                     }
-                    
                 }
-                /* 별자리 icon과 글자 포지션 */
-                .JBox {
-                    justify-self: center;
-                    position: relative;
-
-                    p {
-                        transform: translateY(13px) translateX(-25px);
-                    }
-
-                    .JStar1 {
-                        position: absolute;
-                        top: 20px;
-                        left: 45px;
-                    }
-
-                    .JStar2 {
-                        position: absolute;
-                        top: 70px;
-                        left: 48.5px;
-                    }
-
-                    .JStar3 {
-                        position: absolute;
-                        top: 100px;
-                        left: 47px;
-                    }
-
-                    .JStar4 {
-                        position: absolute;
-                        top: 120px;
-                        left: 26px;
-                    }
-
-                    .JStar5 {
-                        position: absolute;
-                        top: 100px;
-                        left: -1px;
+                /* skill 설명 박스 */
+                .textbox {
+                    height: 1100px;
+                    ul {
+                        width: 36.458vw;
+                        .titleLIs {
+                            height: 150px;
+                            border-top: .7px solid #fff;
+                            font-size: 1.25rem;
+                            display: grid;
+                            grid-template-columns: 1.5fr 2fr;
+                            justify-content: center;
+                            padding: 1.563vw 0 1.563vw 0.521vw;
+                            ol {
+                                list-style: disc;
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                                gap: 0.781vw;
+                                li {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                        .titleLIs:last-child {
+                            border-bottom: .7px solid #fff;
+                        }
                     }
                 }
-                /* 별자리 icon과 글자 포지션 */
-                .RBox {
-                    justify-self: center;
-                    position: relative;
-
-                    p {
-                        transform: translateX(13px)translateY(13px);
-                    }
-
-                    .RStar1 {
-                        position: absolute;
-                        top: 20px;
-                        left: 5px;
-                    }
-
-                    .RStar2 {
-                        position: absolute;
-                        top: 24px;
-                        left: 49px;
-                    }
-
-                    .RStar3 {
-                        position: absolute;
-                        top: 55px;
-                        left: 67px;
-                    }
-
-                    .RStar4 {
-                        position: absolute;
-                        top: 72px;
-                        left: 45px;
-                    }
-
-                    .RStar5 {
-                        position: absolute;
-                        top: 80px;
-                        left: 9px;
-                    }
-
-                    .RStar6 {
-                        position: absolute;
-                        top: 118px;
-                        left: 7.5px;
-                    }
-
-                    .RStar7 {
-                        position: absolute;
-                        top: 118px;
-                        left: 69px;
-                    }
+                /* icon  */
+                i {
+                    opacity: 0;
                 }
-                /* 별자리 icon과 글자 포지션 */
-                .DBox {
-                    justify-self: center;
-                    position: relative;
-
+                /* 텍스트 박스 마우스 오버시 색상 변경/ .titleLIs에 마우스 오버시 (HBox,JBox,RBox,DBox,GBox) 박스 클래스에 add됨 */
+                .active {
+                    i {
+                        transition: all 0s;
+                        transition-property: color;
+                        color: #FFE600;
+                        @keyframes starColor {
+                            from {
+                                opacity: 0;
+                                color: #FFE600;
+                            }
+                            to {
+                                opacity: 1;
+                                color: #FFE600;
+                            }
+                        }
+                        &:nth-child(1) {
+                            animation: starColor 0.1s forwards;
+                        }
+                        &:nth-child(2) {
+                            animation: starColor 0.3s forwards;
+                        }
+                        &:nth-child(3) {
+                            animation: starColor 0.5s forwards;
+                        }
+                        &:nth-child(4) {
+                            animation: starColor 1s forwards;
+                        }
+                        &:nth-child(5) {
+                            animation: starColor 1.3s forwards;
+                        }
+                        &:nth-child(6) {
+                            animation: starColor 1.5s forwards;
+                        }
+                        &:nth-child(7) {
+                            animation: starColor 1.7s forwards;
+                        }
+                        &:nth-child(8) {
+                            animation: starColor 2s forwards;
+                        }
+                        &:nth-child(9) {
+                            animation: starColor 2.3s forwards;
+                        }
+                    }
                     p {
-                        transform: translateX(10px)translateY(13px);
+                        font-weight: 100;
+                        color: #FFE600;
                     }
-
-                    .DStar1 {
-                        position: absolute;
-                        top: 22px;
-                        left: 4px;
-                    }
-
-                    .DStar2 {
-                        position: absolute;
-                        top: 25px;
-                        left: 52px;
-                    }
-
-                    .DStar3 {
-                        position: absolute;
-                        top: 45px;
-                        left: 77px;
-                    }
-
-                    .DStar4 {
-                        position: absolute;
-                        top: 65px;
-                        left: 81px;
-                    }
-
-                    .DStar5 {
-                        position: absolute;
-                        top: 105px;
-                        left: 77px;
-                    }
-
-                    .DStar6 {
-                        position: absolute;
-                        top: 125px;
-                        left: 45px;
-                    }
-
-                    .DStar7 {
-                        position: absolute;
-                        top: 117px;
-                        left: 8px;
-                    }
-
-                    .DStar8 {
-                        position: absolute;
-                        top: 75px;
-                        left: 10.5px;
-                    }
-                }
-                /* 별자리 icon과 글자 포지션 */
-                .GBox {
-                    justify-self: center;
-                    position: relative;
-
-                    p {
-                        transform: translateX(5px)translateY(13px);
-                    }
-
-                    .GStar1 {
-                        position: absolute;
-                        top: 55px;
-                        left: 80px;
-                    }
-
-                    .GStar2 {
-                        position: absolute;
-                        top: 23px;
-                        left: 47px;
-                    }
-
-                    .GStar3 {
-                        position: absolute;
-                        top: 34px;
-                        left: 10px;
-                    }
-
-                    .GStar4 {
-                        position: absolute;
-                        top: 77px;
-                        left: 5px;
-                    }
-
-                    .GStar5 {
-                        position: absolute;
-                        top: 100px;
-                        left: 10px;
-                    }
-
-                    .GStar6 {
-                        position: absolute;
-                        top: 125px;
-                        left: 45px;
-                    }
-
-                    .GStar7 {
-                        position: absolute;
-                        top: 100px;
-                        left: 80px;
-                    }
-
-                    .GStar8 {
-                        position: absolute;
-                        top: 80px;
-                        left: 87px;
-                    }
-
-                    .GStar9 {
-                        position: absolute;
-                        top: 73px;
-                        left: 45px;
+                    .textsoild {
+                        color: rgba(255, 230, 0, 0.4);
+                        font-weight: 100;
+                        -webkit-text-stroke: 0px;
                     }
                 }
             }
+        }
+        /* project */
+        .project {
+            width: 100%;
+            position: relative;
+            h2 {
+                margin-bottom: 10vw;
+                transform: translateX(-30%);
+                transition: 1s;
+                opacity: 0;
+            }
+            .projectbox {
+                margin: 0 15.208vw 0px;
+                display: flex;
+                position: relative;
+                /* 프로젝트 대표 이미지 사진 부분 전체 적용 */
+                .imgbox {
+                    position: sticky;
+                    top: 20%;
+                    width: 50%;
+                    height: 15.625vw;
+                    transition: 1s;
+                    transform: translateY(-150px);
+                    opacity: 1;
 
-            /* skill 설명 박스 */
-            .textbox {
-                height: 1100px;
-
-                ul {
-                    width: 36.458vw;
-
-                    .titleLIs {
-                        height: 150px;
-                        border-top: .7px solid #fff;
-                        font-size: 1.25rem;
-                        display: grid;
-                        grid-template-columns: 1.5fr 2fr;
-                        justify-content: center;
-                        padding: 1.563vw 0 1.563vw 0.521vw;
-
-                        ol {
-                            list-style: disc;
+                    .img {
+                        opacity: 0;
+                        position: absolute;
+                        pointer-events: none;
+                        transition: all .3s;
+                        top: 0; 
+                        width: 35vw;
+                        img { 
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+                /* 텍스트 박스 */
+                .textbox {
+                    width: 40%;
+                    margin-left: auto;
+                    .projectText {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.042vw;
+                        padding: 6.771vw 2.604vw;
+                        /* 해당 사용 프로그램 표시하는 박스 */
+                        .borderbox {
+                            ul {
+                                display: flex;
+                                li {
+                                    border: 0.052vw solid #fff;
+                                    padding: 0.260vw 0.469vw;
+                                    margin-right: 0.521vw;
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                        /* 해당 프로젝트 제목 및 날짜 */
+                        .titlebox {
                             display: flex;
-                            justify-content: center;
-                            flex-direction: column;
-                            gap: 0.781vw;
-
-                            li {
-                                font-size: 1rem;
+                            align-items: flex-end;
+                            margin-bottom: 1.302vw;
+                            /* 제목 */
+                            h3 {
+                                font-size: 2.375rem;
+                                margin-right: 0.729vw;
+                            }
+                            /* 날짜 */
+                            p {
+                                font-size: 0.75rem;
+                                margin-bottom: 0.365vw;
+                            }
+                        }
+                        /* 해시태그 및 대표색상 */
+                        .tagbox {
+                            display: flex;
+                            /* 해시태그 */
+                            .tag {
+                                margin-right: 1.563vw;
+                                h4 {
+                                    font-size: 1rem;
+                                    margin-bottom: 1.042vw;
+                                }
+                                .alinkbox {
+                                    display: flex;
+                                    a {
+                                        font-size: 1.125rem;
+                                        margin-right: 0.625vw;
+                                        transition: .3s;
+                                        position: relative;
+                                        z-index: 99;
+                                        &:last-child {
+                                            margin-right: 0;
+                                        }
+                                        &:hover {
+                                            color: #FFE600;
+                                        }
+                                    }
+                                }
+                            }
+                            /* 대표 컬러 */
+                            .color {
+                                h4 {
+                                    margin-bottom: 1.042vw;
+                                    font-size: 1rem;
+                                }
+                                .colorbox {
+                                    display: flex;
+                                    text-indent: -9999px;
+                                    /* 컬러 모양 */
+                                    .colorbor {
+                                        width: 1.042vw;
+                                        height: 1.042vw;
+                                        border: 0.052vw solid #fff;
+                                        border-radius: 50%;
+                                        margin-right: 0.625vw;
+                                    }
+                                }
                             }
                         }
                     }
-
-                    .titleLIs:last-child {
-                        border-bottom: .7px solid #fff;
-                    }
-                }
-            }
-
-            /* icon  */
-            i {
-                opacity: 0;
-            }
-
-            /* 텍스트 박스 마우스 오버시 색상 변경/ .titleLIs에 마우스 오버시 (HBox,JBox,RBox,DBox,GBox) 박스 클래스에 add됨 */
-            .active {
-                i {
-                    transition: all 0s;
-                    transition-property: color;
-                    color: #FFE600;
-
-                    @keyframes starColor {
-                        from {
-                            opacity: 0;
-                            color: #FFE600;
-                        }
-
-                        to {
-                            opacity: 1;
-                            color: #FFE600;
-                        }
-                    }
-
-                    &:nth-child(1) {
-                        animation: starColor 0.5s forwards;
-                    }
-
-                    &:nth-child(2) {
-                        animation: starColor 0.5s forwards;
-                    }
-
-                    &:nth-child(3) {
-                        animation: starColor 1s forwards;
-                    }
-
-                    &:nth-child(4) {
-                        animation: starColor 2s forwards;
-                    }
-
-                    &:nth-child(5) {
-                        animation: starColor 2.5s forwards;
-                    }
-
-                    &:nth-child(6) {
-                        animation: starColor 2.5s forwards;
-                    }
-
-                    &:nth-child(7) {
-                        animation: starColor 3s forwards;
-                    }
-
-                    &:nth-child(8) {
-                        animation: starColor 4s forwards;
-                    }
-
-                    &:nth-child(9) {
-                        animation: starColor 5s forwards;
-                    }
-                }
-
-                p {
-                    font-weight: 100;
-                    color: #FFE600;
-                }
-
-                .textsoild {
-                    color: rgba(255, 230, 0, 0.4);
-                    font-weight: 100;
-                    -webkit-text-stroke: 0px;
                 }
             }
         }
     }
-    /* project */
-    .project {
-        width: 100%;
-        position: relative;
-        h2 {
-            margin-bottom: 10vw;
-            transform: translateX(-30%);
-            transition: 1s;
-            opacity: 0;
-        }
-
-        .projectbox {
-            margin: 0 15.208vw 0px;
-            display: flex;
-            height: 88.542vw;
-            position: relative;
-
-            /* 프로젝트 대표 이미지 사진 부분 전체 적용 */
-            .imgbox {
-                position: sticky;
-                top: 20%;
-                width: 50%;
-                height: 15.625vw;
-                transition: 1s;
-                transform: translateY(-150px);
-                opacity: 0;
-                .img {
-                    opacity: 0;
-                    position: absolute;
-                    pointer-events: none;
-                    transition: all .3s;
-                    top: 0; 
-                    width: 35vw;
-                    img { 
-                        display: block;
-                        width: 100%;
-                    }
+    /* footer */
+    footer {
+        .contact {
+            .pos {
+                position: relative;
+                height: 900px;
+                h2 {
+                    padding-top: 0;
                 }
-            }
-            
-            /* 텍스트 박스 */
-            .textbox {
-                width: 40%;
-                margin-left: auto;
-                .projectText {
+                /* contact 메인 */
+                .contactflex {
+                    height: 700px;
                     display: flex;
-                    flex-direction: column;
-                    gap: 1.042vw;
-                    padding: 6.771vw 2.604vw;
-
-                    /* 해당 사용 프로그램 표시하는 박스 */
-                    .borderbox {
-                        ul {
-                            display: flex;
-    
-                            li {
-                                border: 0.052vw solid #fff;
-                                padding: 0.260vw 0.469vw;
-                                margin-right: 0.521vw;
-                                font-size: 0.75rem;
+                    justify-content: center;
+                    align-items: center;
+                    /* 별자리 */
+                    .staricon {
+                        position: relative;
+                        width: 400px; 
+                        height: 500px;
+                        margin-right: 200px;
+                        /* 별모양 아이콘 포지션 */
+                        .icon {
+                            i {
+                                color: rgba(255, 230, 0, 1);
+                                box-shadow: 0px 0px 25px 5px rgba(255,230,0,0.5);
+                                opacity: 0;
+                                animation: starani infinite ;
+                                animation-duration: 12s;
+                            }
+                            @keyframes starani {
+                                50% {
+                                    opacity: 1;
+                                }
+                                100% {
+                                    opacity: 0;
+                                }
+                            }
+                            /* 별 포지션 */
+                            .contactStar1 {
+                                position: absolute;
+                                top: 190px;
+                                left: 11px;
+                                transform: rotate(30deg);
+                                animation-delay: 0s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar2 {
+                                position: absolute;
+                                top: 220px;
+                                left: 40px;
+                                transform: rotate(25deg);
+                                animation-delay: 0.1s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar3 {
+                                position: absolute;
+                                top: 180px;
+                                left: 125px;
+                                transform: rotate(29deg);
+                                animation-delay: 0.4s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar4 {
+                                position: absolute;
+                                top: 87px;
+                                left: 200px;
+                                transform: rotate(35deg);
+                                animation-delay: 0.9s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar5 {
+                                position: absolute;
+                                top: 143px;
+                                left: 343px;
+                                transform: rotate(55deg);
+                                animation-delay: 2s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar6 {
+                                position: absolute;
+                                top: 290px; left: 310px;
+                                transform: rotate(30deg);
+                                animation-delay: 2.7s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar7 {
+                                position: absolute;
+                                top: 377px; left: 155px;
+                                transform: rotate(45deg);
+                                animation-delay: 3.3s;
+                            }
+                            /* 별 포지션 */
+                            .contactStar8 {
+                                position: absolute;
+                                top: 400px; left: 155px;
+                                transform: rotate(45deg);
+                                animation-delay: 3.5s;
+                            }
+                        }
+                        /* 별자리 직선 포지션 */
+                        svg {
+                            position: absolute;
+                            top: 91px; left: 36px;
+                            transform: rotate(-10deg);
+                        }
+                        .st0 {
+                            stroke:#fff;
+                            stroke-miterlimit:10;  
+                            stroke-dasharray: 1000;
+                            stroke-dashoffset: 1000;
+                            animation: dash 6s linear infinite alternate;
+                        }
+                        .st01 {
+                            stroke:#fff;
+                            stroke-miterlimit:10;  
+                            stroke-dasharray: 1000;
+                            stroke-dashoffset: 1000;
+                            animation: dash2 6s infinite alternate;
+                        }
+                        @keyframes dash {
+                            0% {
+                            stroke-dashoffset: 1000;
+                            }
+                            100% {
+                            stroke-dashoffset: 0;
+                            }
+                        }
+                        @keyframes dash2 {
+                            25% {
+                                stroke-dashoffset: 1000;
+                            }
+                            100% {
+                                stroke-dashoffset: 0;
                             }
                         }
                     }
-    
-                    /* 해당 프로젝트 제목 및 날짜 */
-                    .titlebox {
+                    /* 간단 소개 */
+                    .intro {
                         display: flex;
-                        align-items: flex-end;
-                        margin-bottom: 1.302vw;
-    
-                        /* 제목 */
-                        h3 {
-                            font-size: 2.375rem;
-                            margin-right: 0.729vw;
-                        }
-    
-                        /* 날짜 */
-                        p {
-                            font-size: 0.75rem;
-                            margin-bottom: 0.365vw;
-                        }
-                    }
-    
-                    /* 해시태그 및 대표색상 */
-                    .tagbox {
-                        display: flex;
-    
-                        /* 해시태그 */
-                        .tag {
-                            margin-right: 1.563vw;
-    
-                            h4 {
-                                font-size: 1rem;
+                        align-items: center;
+                        gap: 3.906vw;
+                        /* 소개 */
+                        .introTxt {
+                            text-align: center;
+                            /* 이름 */
+                            h5 {
+                                font-size: 1.875rem;
                                 margin-bottom: 1.042vw;
                             }
-    
-                            .alinkbox {
-                                display: flex;
-    
+                            /* 이메일 */
+                            p {
+                                font-size: 1rem;
                                 a {
-                                    font-size: 1.125rem;
-                                    margin-right: 0.625vw;
-                                    transition: .3s;
                                     position: relative;
                                     z-index: 99;
-    
-                                    &:last-child {
-                                        margin-right: 0;
-                                    }
-    
                                     &:hover {
                                         color: #FFE600;
                                     }
                                 }
                             }
                         }
-                        /* 대표 컬러 */
-                        .color {
-                            h4 {
-                                margin-bottom: 1.042vw;
-                                font-size: 1rem;
+                        /* 카카오톡 오픈 채팅방 사진 */
+                        .kakaoQR {
+                            /* QR코드 */
+                            .QRcode {
+                                width: 8.958vw;
+                                img {
+                                    width: 100%;
+                                }
                             }
-    
-                            .colorbox {
-                                display: flex;
-                                text-indent: -9999px;
-    
-                                .color1 {
-                                    width: 1.042vw;
-                                    height: 1.042vw;
-                                    border: 0.052vw solid #fff;
-                                    border-radius: 50%;
-                                    margin-right: 0.625vw;
-                                }
-    
-                                .color2 {
-                                    width: 1.042vw;
-                                    height: 1.042vw;
-                                    border: 0.052vw solid #fff;
-                                    border-radius: 50%;
-                                    margin-right: 0.625vw;
-                                }
-    
-                                .color3 {
-                                    width: 1.042vw;
-                                    height: 1.042vw;
-                                    border: 0.052vw solid #fff;
-                                    border-radius: 50%;
-                                    margin-right: 0.625vw;
-                                }
-    
-                                .color4 {
-                                    width: 1.042vw;
-                                    height: 1.042vw;
-                                    border: 0.052vw solid #fff;
-                                    border-radius: 50%;
-                                }
+                            /* 카카오톡 오픈 챗 글자 */
+                            p {
+                                font-size: 0.75rem;
+                                text-align: right;
+                                text-transform: uppercase;
+                                margin-top: 0.521vw;
                             }
                         }
                     }
                 }
+                /* 옆으로 움직이는 글자 */
+                .rotateL {
+                    overflow: hidden;
+                    /* 움직이는 글자 */
+                    .rotateLetter {
+                        font-size: 2.188rem;
+                        position: absolute;
+                        bottom: 3.646vw;
+                        left: 1.042vw;
+                        letter-spacing: 10px;
+                        font-family: "MonoplexKR", sans-serif;
+                        white-space: nowrap;
+                        animation: rotateLetter 30s linear infinite;
+                    }
+                    /* 애니메이션 */
+                    @keyframes rotateLetter {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(-50%);
+                        }
+                    }
+                }    
             }
         }
     }
-}
-/* footer */
-footer {
-    position: relative;
-
-    .contact {
-        height: 900px;
-        /* contact 메인 */
-        .contactflex {
-            height: 700px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-           
-
-            /* 별자리 */
-            .staricon {
-                position: relative;
-                width: 400px; height: 500px;
-                margin-right: 200px;
-
-                /* 별모양 아이콘 포지션 */
-                .icon {
-                    i {
-                        color: rgba(255, 230, 0, 1);
-                        box-shadow: 0px 0px 25px 5px rgba(255,230,0,0.5);
-                        opacity: 0;
-                        animation: starani infinite ;
-                        animation-duration: 12s;
-                    }
-                    @keyframes starani {
-                        50% {
-                            opacity: 1;
-                        }
-                        100% {
-                            opacity: 0;
-                        }
-                    }
-                    /* 별 포지션 */
-                    .contactStar1 {
-                        position: absolute;
-                        top: 190px;
-                        left: 11px;
-                        transform: rotate(30deg);
-                        animation-delay: 0s;
-                        
-                    }
-                    /* 별 포지션 */
-                    .contactStar2 {
-                        position: absolute;
-                        top: 220px;
-                        left: 40px;
-                        transform: rotate(25deg);
-                        animation-delay: 0.1s;
-                    }
-                    /* 별 포지션 */
-                    .contactStar3 {
-                        position: absolute;
-                        top: 180px;
-                        left: 125px;
-                        transform: rotate(29deg);
-                        animation-delay: 0.4s;
-                    }
-                    /* 별 포지션 */
-                    .contactStar4 {
-                        position: absolute;
-                        top: 87px;
-                        left: 200px;
-                        transform: rotate(35deg);
-                        animation-delay: 0.9s;
-                    }
-                    /* 별 포지션 */
-                    .contactStar5 {
-                        position: absolute;
-                        top: 143px;
-                        left: 343px;
-                        transform: rotate(55deg);
-                        animation-delay: 2s;
-                    }
-                    /* 별 포지션 */
-                    .contactStar6 {
-                        position: absolute;
-                        top: 290px; left: 310px;
-                        transform: rotate(30deg);
-                        animation-delay: 2.7s;
-                    }
-                    /* 별 포지션 */
-                    .contactStar7 {
-                        position: absolute;
-                        top: 377px; left: 155px;
-                        transform: rotate(45deg);
-                        animation-delay: 3.3s;
-                    }
-                    /* 별 포지션 */
-                    .contactStar8 {
-                        position: absolute;
-                        top: 400px; left: 155px;
-                        transform: rotate(45deg);
-                        animation-delay: 3.5s;
-                    }
-                    
-
-                }
-                /* 별자리 직선 포지션 */
-                svg {
-                    position: absolute;
-                    top: 91px; left: 36px;
-                    transform: rotate(-10deg);
-                }
-                .st0 {
-                    stroke:#fff;
-                    stroke-miterlimit:10;  
-                    stroke-dasharray: 1000;
-                    stroke-dashoffset: 1000;
-                    animation: dash 6s linear infinite alternate;
-                }
-                .st01 {
-                    stroke:#fff;
-                    stroke-miterlimit:10;  
-                    stroke-dasharray: 1000;
-                    stroke-dashoffset: 1000;
-                    animation: dash2 6s infinite alternate;
-                }
-                  
-                @keyframes dash {
-                    0% {
-                      stroke-dashoffset: 1000;
-                    }
-                    100% {
-                      stroke-dashoffset: 0;
-                    }
-                }
-                @keyframes dash2 {
-                    25% {
-                        stroke-dashoffset: 1000;
-                    }
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
-            }
-            /* 간단 소개 */
-            .intro {
-                display: flex;
-                align-items: center;
-                gap: 3.906vw;
-
-                /* 소개 */
-                .introTxt {
-                    text-align: center;
-
-                    /* 이름 */
-                    h5 {
-                        font-size: 1.875rem;
-                        margin-bottom: 1.042vw;
-                    }
-                    /* 이메일 */
-                    p {
-                        font-size: 1rem;
-                        a {
-                            position: relative;
-                            z-index: 99;
-                            &:hover {
-                                color: #FFE600;
-                            }
-                        }
-                    }
-                }
-
-                /* 카카오톡 오픈 채팅방 사진 */
-                .kakaoQR {
-                    /* QR코드 */
-                    .QRcode {
-                        width: 8.958vw;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    /* 카카오톡 오픈 챗 글자 */
-                    p {
-                        font-size: 0.75rem;
-                        text-align: right;
-                        text-transform: uppercase;
-                        margin-top: 0.521vw;
-                    }
-                }
-            }
-        }
-    }
-
-    /* 옆으로 움직이는 글자 */
-    .rotateL {
-        overflow: hidden;
-
-        /* 움직이는 글자 */
-        .rotateLetter {
-            font-size: 2.188rem;
-            position: absolute;
-            bottom: 3.646vw;
-            left: 1.042vw;
-            letter-spacing: 10px;
-            font-family: "MonoplexKR", sans-serif;
-            white-space: nowrap;
-            animation: rotateLetter 30s linear infinite;
-        }
-
-        /* 애니메이션 */
-        @keyframes rotateLetter {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-    }
-
-}
-
-
 }

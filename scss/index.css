@@ -1,13 +1,9 @@
 @charset "UTF-8";
 html {
-  /* 밑색 */
-  background-color: #332b50;
+  margin: 0;
+  position: relative;
   /* 스크롤바 */
   scroll-behavior: smooth;
-  margin: 0;
-  height: 100%;
-  max-width: 100%;
-  position: relative;
 }
 html::-webkit-scrollbar {
   width: 0;
@@ -15,7 +11,6 @@ html::-webkit-scrollbar {
 }
 
 body {
-  width: 100%;
   /* 마우스 커서 */
   cursor: none;
   /* 전체 기본 폰트 */
@@ -144,7 +139,6 @@ body header {
   font-weight: 100;
   /* header logo */
   /* h1 로고 스크롤시 크기 줄어듬 */
-  /* header nav */
   /* header rotate */
   /* header 제목 */
 }
@@ -196,32 +190,12 @@ body header .logoActive .flexBox .logo a {
 body header .logoActive .flexBox .email {
   font-size: 1rem;
 }
-body header .header_nav {
-  position: relative;
-  z-index: 9;
-  float: right;
-  transform: translateY(405px) translateX(-39px);
-  font-size: 1.375rem;
-  text-transform: uppercase;
-  text-align: right;
-  font-weight: 300;
-}
-body header .header_nav li a {
-  margin-bottom: 37px;
-  transition: 0.4s;
-}
-body header .header_nav li a:hover {
-  color: #FFE600;
-}
-body header .header_nav li:last-child a {
-  margin-bottom: 0px;
-}
 body header .header_rotate {
   width: 52.083vw;
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 50%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -237,7 +211,7 @@ body header .header_rotate img {
 }
 body header p {
   position: absolute;
-  top: 50%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3.125rem;
@@ -259,7 +233,14 @@ body #sideNav {
 body #sideNav ul li {
   padding-bottom: 2.604vw;
   text-indent: -9999px;
+  width: 0.985vw;
+  height: 0.985vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* 원형 메뉴바 */
+  /* 해당 지점 별모양 고정 */
 }
 body #sideNav ul li:last-child {
   padding-bottom: 0;
@@ -273,6 +254,11 @@ body #sideNav ul li a {
   /* 메뉴바 마우스 오버시 별모양으로 바뀜 */
 }
 body #sideNav ul li a:hover {
+  width: 0.985vw;
+  height: 0.985vw;
+  background: url(../imgs/indexIMG/star-solid.svg) no-repeat 50%/cover;
+}
+body #sideNav ul li .fixation {
   width: 0.985vw;
   height: 0.985vw;
   background: url(../imgs/indexIMG/star-solid.svg) no-repeat 50%/cover;
@@ -328,7 +314,7 @@ body main .skill .skillbox .star p {
   font-size: 0.875rem;
 }
 body main .skill .skillbox .star .textsoild {
-  font-size: 9.375rem;
+  font-size: 150px;
   font-weight: 100;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
@@ -590,31 +576,31 @@ body main .skill .skillbox .active i {
   }
 }
 body main .skill .skillbox .active i:nth-child(1) {
-  animation: starColor 0.5s forwards;
+  animation: starColor 0.1s forwards;
 }
 body main .skill .skillbox .active i:nth-child(2) {
-  animation: starColor 0.5s forwards;
+  animation: starColor 0.3s forwards;
 }
 body main .skill .skillbox .active i:nth-child(3) {
-  animation: starColor 1s forwards;
+  animation: starColor 0.5s forwards;
 }
 body main .skill .skillbox .active i:nth-child(4) {
-  animation: starColor 2s forwards;
+  animation: starColor 1s forwards;
 }
 body main .skill .skillbox .active i:nth-child(5) {
-  animation: starColor 2.5s forwards;
+  animation: starColor 1.3s forwards;
 }
 body main .skill .skillbox .active i:nth-child(6) {
-  animation: starColor 2.5s forwards;
+  animation: starColor 1.5s forwards;
 }
 body main .skill .skillbox .active i:nth-child(7) {
-  animation: starColor 3s forwards;
+  animation: starColor 1.7s forwards;
 }
 body main .skill .skillbox .active i:nth-child(8) {
-  animation: starColor 4s forwards;
+  animation: starColor 2s forwards;
 }
 body main .skill .skillbox .active i:nth-child(9) {
-  animation: starColor 5s forwards;
+  animation: starColor 2.3s forwards;
 }
 body main .skill .skillbox .active p {
   font-weight: 100;
@@ -638,7 +624,6 @@ body main .project h2 {
 body main .project .projectbox {
   margin: 0 15.208vw 0px;
   display: flex;
-  height: 88.542vw;
   position: relative;
   /* 프로젝트 대표 이미지 사진 부분 전체 적용 */
   /* 텍스트 박스 */
@@ -650,7 +635,7 @@ body main .project .projectbox .imgbox {
   height: 15.625vw;
   transition: 1s;
   transform: translateY(-150px);
-  opacity: 0;
+  opacity: 1;
 }
 body main .project .projectbox .imgbox .img {
   opacity: 0;
@@ -736,43 +721,25 @@ body main .project .projectbox .textbox .projectText .tagbox .color h4 {
 body main .project .projectbox .textbox .projectText .tagbox .color .colorbox {
   display: flex;
   text-indent: -9999px;
+  /* 컬러 모양 */
 }
-body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color1 {
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .colorbor {
   width: 1.042vw;
   height: 1.042vw;
   border: 0.052vw solid #fff;
   border-radius: 50%;
   margin-right: 0.625vw;
 }
-body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color2 {
-  width: 1.042vw;
-  height: 1.042vw;
-  border: 0.052vw solid #fff;
-  border-radius: 50%;
-  margin-right: 0.625vw;
-}
-body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color3 {
-  width: 1.042vw;
-  height: 1.042vw;
-  border: 0.052vw solid #fff;
-  border-radius: 50%;
-  margin-right: 0.625vw;
-}
-body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color4 {
-  width: 1.042vw;
-  height: 1.042vw;
-  border: 0.052vw solid #fff;
-  border-radius: 50%;
-}
-body footer {
+body footer .contact .pos {
   position: relative;
-  /* 옆으로 움직이는 글자 */
-}
-body footer .contact {
   height: 900px;
   /* contact 메인 */
+  /* 옆으로 움직이는 글자 */
 }
-body footer .contact .contactflex {
+body footer .contact .pos h2 {
+  padding-top: 0;
+}
+body footer .contact .pos .contactflex {
   height: 700px;
   display: flex;
   justify-content: center;
@@ -780,7 +747,7 @@ body footer .contact .contactflex {
   /* 별자리 */
   /* 간단 소개 */
 }
-body footer .contact .contactflex .staricon {
+body footer .contact .pos .contactflex .staricon {
   position: relative;
   width: 400px;
   height: 500px;
@@ -788,7 +755,7 @@ body footer .contact .contactflex .staricon {
   /* 별모양 아이콘 포지션 */
   /* 별자리 직선 포지션 */
 }
-body footer .contact .contactflex .staricon .icon {
+body footer .contact .pos .contactflex .staricon .icon {
   /* 별 포지션 */
   /* 별 포지션 */
   /* 별 포지션 */
@@ -798,7 +765,7 @@ body footer .contact .contactflex .staricon .icon {
   /* 별 포지션 */
   /* 별 포지션 */
 }
-body footer .contact .contactflex .staricon .icon i {
+body footer .contact .pos .contactflex .staricon .icon i {
   color: rgb(255, 230, 0);
   box-shadow: 0px 0px 25px 5px rgba(255, 230, 0, 0.5);
   opacity: 0;
@@ -813,76 +780,76 @@ body footer .contact .contactflex .staricon .icon i {
     opacity: 0;
   }
 }
-body footer .contact .contactflex .staricon .icon .contactStar1 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar1 {
   position: absolute;
   top: 190px;
   left: 11px;
   transform: rotate(30deg);
   animation-delay: 0s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar2 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar2 {
   position: absolute;
   top: 220px;
   left: 40px;
   transform: rotate(25deg);
   animation-delay: 0.1s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar3 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar3 {
   position: absolute;
   top: 180px;
   left: 125px;
   transform: rotate(29deg);
   animation-delay: 0.4s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar4 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar4 {
   position: absolute;
   top: 87px;
   left: 200px;
   transform: rotate(35deg);
   animation-delay: 0.9s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar5 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar5 {
   position: absolute;
   top: 143px;
   left: 343px;
   transform: rotate(55deg);
   animation-delay: 2s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar6 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar6 {
   position: absolute;
   top: 290px;
   left: 310px;
   transform: rotate(30deg);
   animation-delay: 2.7s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar7 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar7 {
   position: absolute;
   top: 377px;
   left: 155px;
   transform: rotate(45deg);
   animation-delay: 3.3s;
 }
-body footer .contact .contactflex .staricon .icon .contactStar8 {
+body footer .contact .pos .contactflex .staricon .icon .contactStar8 {
   position: absolute;
   top: 400px;
   left: 155px;
   transform: rotate(45deg);
   animation-delay: 3.5s;
 }
-body footer .contact .contactflex .staricon svg {
+body footer .contact .pos .contactflex .staricon svg {
   position: absolute;
   top: 91px;
   left: 36px;
   transform: rotate(-10deg);
 }
-body footer .contact .contactflex .staricon .st0 {
+body footer .contact .pos .contactflex .staricon .st0 {
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 6s linear infinite alternate;
 }
-body footer .contact .contactflex .staricon .st01 {
+body footer .contact .pos .contactflex .staricon .st01 {
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-dasharray: 1000;
@@ -905,54 +872,54 @@ body footer .contact .contactflex .staricon .st01 {
     stroke-dashoffset: 0;
   }
 }
-body footer .contact .contactflex .intro {
+body footer .contact .pos .contactflex .intro {
   display: flex;
   align-items: center;
   gap: 3.906vw;
   /* 소개 */
   /* 카카오톡 오픈 채팅방 사진 */
 }
-body footer .contact .contactflex .intro .introTxt {
+body footer .contact .pos .contactflex .intro .introTxt {
   text-align: center;
   /* 이름 */
   /* 이메일 */
 }
-body footer .contact .contactflex .intro .introTxt h5 {
+body footer .contact .pos .contactflex .intro .introTxt h5 {
   font-size: 1.875rem;
   margin-bottom: 1.042vw;
 }
-body footer .contact .contactflex .intro .introTxt p {
+body footer .contact .pos .contactflex .intro .introTxt p {
   font-size: 1rem;
 }
-body footer .contact .contactflex .intro .introTxt p a {
+body footer .contact .pos .contactflex .intro .introTxt p a {
   position: relative;
   z-index: 99;
 }
-body footer .contact .contactflex .intro .introTxt p a:hover {
+body footer .contact .pos .contactflex .intro .introTxt p a:hover {
   color: #FFE600;
 }
-body footer .contact .contactflex .intro .kakaoQR {
+body footer .contact .pos .contactflex .intro .kakaoQR {
   /* QR코드 */
   /* 카카오톡 오픈 챗 글자 */
 }
-body footer .contact .contactflex .intro .kakaoQR .QRcode {
+body footer .contact .pos .contactflex .intro .kakaoQR .QRcode {
   width: 8.958vw;
 }
-body footer .contact .contactflex .intro .kakaoQR .QRcode img {
+body footer .contact .pos .contactflex .intro .kakaoQR .QRcode img {
   width: 100%;
 }
-body footer .contact .contactflex .intro .kakaoQR p {
+body footer .contact .pos .contactflex .intro .kakaoQR p {
   font-size: 0.75rem;
   text-align: right;
   text-transform: uppercase;
   margin-top: 0.521vw;
 }
-body footer .rotateL {
+body footer .contact .pos .rotateL {
   overflow: hidden;
   /* 움직이는 글자 */
   /* 애니메이션 */
 }
-body footer .rotateL .rotateLetter {
+body footer .contact .pos .rotateL .rotateLetter {
   font-size: 2.188rem;
   position: absolute;
   bottom: 3.646vw;

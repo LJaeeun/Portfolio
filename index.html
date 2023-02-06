@@ -40,6 +40,8 @@
         <script src="./js/index.js"></script>
     </head>
     <body>
+        <!-- 배경 별 -->
+        <div class="constelacao"></div>
         <!-- 마우스 -->
         <div class="cursor">
             <div class="cursor__ball cursor__ball--big">
@@ -49,8 +51,8 @@
             </div>
         </div>
 
-        <!-- 배경 별 -->
-        <div class="constelacao"></div>
+        
+        
 
         <!-- header -->
         <header id="home">
@@ -64,13 +66,13 @@
                     </div>
                 </div>
             </h1>
-            <div id="headNav">
+            <!-- <div id="headNav">
                 <ul class="header_nav">
                     <li><a href="#skill" class="hoverable">SKILL</a></li>
                     <li><a href="#project" class="hoverable">PROJECT</a></li>
                     <li><a href="#contact" class="hoverable">CONTACT</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="header_rotate">
                 <img src="./imgs/indexIMG/Header_rotate.png" alt="header_rotate">
             </div>
@@ -90,17 +92,17 @@
                         <span>home</span>
                     </a>
                 </li>
-                <li>
+                <li id="fixStar1">
                     <a href="#skill" class="hoverable">
                         <span>skill</span>
                     </a>
                 </li>
-                <li>
+                <li id="fixStar2">
                     <a href="#project" class="hoverable">
                         <span>project</span>
                     </a>
                 </li>
-                <li>
+                <li id="fixStar3">
                     <a href="#contact" class="hoverable">
                         <span>contact</span>
                     </a>
@@ -250,7 +252,7 @@
                         </div>
                     </div>
                     <div class="textbox">
-                        <div class="projectText">
+                        <div class="projectText txt1">
                             <div class="borderbox">
                                 <ul>
                                     <li>REACT</li>
@@ -278,15 +280,15 @@
                                 <div class="color">
                                     <h4>대표 색상</h4>
                                     <div class="colorbox">
-                                        <div class="color1">1</div>
-                                        <div class="color2">2</div>
-                                        <div class="color3">3</div>
-                                        <div class="color4">4</div>
+                                        <div class="colorbor color1">1</div>
+                                        <div class="colorbor color2">2</div>
+                                        <div class="colorbor color3">3</div>
+                                        <div class="colorbor color4">4</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="projectText sss">
+                        <div class="projectText txt2">
                             <div class="borderbox">
                                 <ul>
                                     <li>REACT</li>
@@ -314,15 +316,15 @@
                                 <div class="color">
                                     <h4>대표 색상</h4>
                                     <div class="colorbox">
-                                        <div class="color1">1</div>
-                                        <div class="color2">2</div>
-                                        <div class="color3">3</div>
-                                        <div class="color4">4</div>
+                                        <div class="colorbor color1">1</div>
+                                        <div class="colorbor color2">2</div>
+                                        <div class="colorbor color3">3</div>
+                                        <div class="colorbor color4">4</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="projectText">
+                        <div class="projectText txt3">
                             <div class="borderbox">
                                 <ul>
                                     <li>REACT</li>
@@ -350,15 +352,15 @@
                                 <div class="color">
                                     <h4>대표 색상</h4>
                                     <div class="colorbox">
-                                        <div class="color1">1</div>
-                                        <div class="color2">2</div>
-                                        <div class="color3">3</div>
-                                        <div class="color4">4</div>
+                                        <div class="colorbor color1">1</div>
+                                        <div class="colorbor color2">2</div>
+                                        <div class="colorbor color3">3</div>
+                                        <div class="colorbor color4">4</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="projectText">
+                        <div class="projectText txt4">
                             <div class="borderbox">
                                 <ul>
                                     <li>REACT</li>
@@ -386,10 +388,10 @@
                                 <div class="color">
                                     <h4>대표 색상</h4>
                                     <div class="colorbox">
-                                        <div class="color1">1</div>
-                                        <div class="color2">2</div>
-                                        <div class="color3">3</div>
-                                        <div class="color4">4</div>
+                                        <div class="colorbor color1">1</div>
+                                        <div class="colorbor color2">2</div>
+                                        <div class="colorbor color3">3</div>
+                                        <div class="colorbor color4">4</div>
                                     </div>
                                 </div>
                             </div>
@@ -402,47 +404,64 @@
         <!-- footer -->
         <footer>
             <div class="contact" id="contact">
-                <h2>contact</h2>
-                <div class="contactflex">
-                    <div class="staricon">
-                        <svg width="337" height="303" viewBox="0 0 337 303" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="st0" d="M0 76.4805L21.8478 107.857L114.094 82.3636L206.341 0L335 82.3636L271.884 221.597L101.957 274.545L97.1015 302" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-                            <path class="st01" d="M207 2L275 222" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-                        </svg>
-                        <div class="icon">
-                            <i class="fa-solid fa-star fa-lg contactStar1"></i>
-                            <i class="fa-solid fa-star fa-lg  contactStar2"></i>
-                            <i class="fa-solid fa-star fa-lg  contactStar3"></i>
-                            <i class="fa-solid fa-star fa-2xl contactStar4"></i>
-                            <i class="fa-solid fa-star fa-lg  contactStar5"></i>
-                            <i class="fa-solid fa-star fa-lg contactStar6"></i>
-                            <i class="fa-solid fa-star fa-sm contactStar7"></i>
-                            <i class="fa-solid fa-star fa-xs contactStar8"></i>
-                        </div>
-                    </div>
-                    <div class="intro">
-                        <div class="introTxt">
-                            <h5>이 재 은</h5>
-                            <p class="hoverable">
-                                <a target="_blank" href="mailto:tpdls082@naver.com?subject=포트폴리오보고 연락드립니다">tpdls082@naver.com</a>
-                            </p>
-                        </div>
-                        <div class="kakaoQR">
-                            <div class="QRcode hoverable">
-                                <a href="https://open.kakao.com/o/siB5XATe" target="_blank">
-                                    <img src="./imgs/indexIMG/kakaoOpenChat.jpg" alt="kakaoOpenChat">
-                                </a>
+                <div class="pos">
+                    <h2>contact</h2>
+                    <div class="contactflex">
+                        <div class="staricon">
+                            <svg width="337" height="303" viewBox="0 0 337 303" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="st0" d="M0 76.4805L21.8478 107.857L114.094 82.3636L206.341 0L335 82.3636L271.884 221.597L101.957 274.545L97.1015 302" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
+                                <path class="st01" d="M207 2L275 222" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
+                            </svg>
+                            <div class="icon">
+                                <i class="fa-solid fa-star fa-lg contactStar1"></i>
+                                <i class="fa-solid fa-star fa-lg  contactStar2"></i>
+                                <i class="fa-solid fa-star fa-lg  contactStar3"></i>
+                                <i class="fa-solid fa-star fa-2xl contactStar4"></i>
+                                <i class="fa-solid fa-star fa-lg  contactStar5"></i>
+                                <i class="fa-solid fa-star fa-lg contactStar6"></i>
+                                <i class="fa-solid fa-star fa-sm contactStar7"></i>
+                                <i class="fa-solid fa-star fa-xs contactStar8"></i>
                             </div>
-                            <p>kakao Open Chat</p>
+                        </div>
+                        <div class="intro">
+                            <div class="introTxt">
+                                <h5>이 재 은</h5>
+                                <p class="hoverable">
+                                    <a target="_blank" href="mailto:tpdls082@naver.com?subject=포트폴리오보고 연락드립니다">tpdls082@naver.com</a>
+                                </p>
+                            </div>
+                            <div class="kakaoQR">
+                                <div class="QRcode hoverable">
+                                    <a href="https://open.kakao.com/o/siB5XATe" target="_blank">
+                                        <img src="./imgs/indexIMG/kakaoOpenChat.jpg" alt="kakaoOpenChat">
+                                    </a>
+                                </div>
+                                <p>kakao Open Chat</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="rotateL">
-                    <div class="rotateLetter">THANK YOU FOR MY PORTFOLIO, CONTACT ME :) &nbsp;THANK YOU FOR MY PORTFOLIO, CONTACT ME :) &nbsp;THANK YOU FOR MY PORTFOLIO, CONTACT ME :)</div>
+                    <div class="rotateL">
+                        <div class="rotateLetter">THANK YOU FOR MY PORTFOLIO, CONTACT ME :) &nbsp;THANK YOU FOR MY PORTFOLIO, CONTACT ME :) &nbsp;THANK YOU FOR MY PORTFOLIO, CONTACT ME :)</div>
+                    </div>
                 </div>
             </div>
         </footer>
        
+        <script>
+            
+            /* const project = document.querySelector('#project');
+            console.log(skill.offsetTop);//1124
+            console.log(project.offsetTop);//2669
+            console.log(contact.offsetTop);//4649
+            
+
+
+            let height = skill.offsetTop - document.documentElement.clientHeight;
+            console.log(height);//177
+            
+            console.log(document.documentElement.scrollTop);//574 */
+
+        </script>
         
     </body>
  

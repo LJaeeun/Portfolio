@@ -13,11 +13,11 @@ window.onload = function init(){
     let estrela = "";
     let qtdeEstrelas = 650;
     let body = document.querySelector(".constelacao");
-    let widthWindow = window.innerWidth;
+    let widthWindow = document.documentElement.clientWidth;
     let heightWindow = document.body.clientHeight;
-/*     console.log(document.documentElement.clientHeight)
-    console.log(heightWindow)
-    console.log(document.body.clientHeight) */
+/*     console.log(heightWindow);
+    console.log(body);
+    console.log(widthWindow); */
 
     
     for (let i = 0; i < qtdeEstrelas; i++) {
@@ -66,7 +66,38 @@ window.onload = function init(){
     addEventListener('scroll', () => {
       let ht = document.documentElement.scrollTop;
       scrollY > 800 ? sideNav.style.opacity = 1 : sideNav.style.opacity = 0;
-    })    
+      
+      const skill = document.querySelector('#skill');
+      const project = document.querySelector('#project');
+      const contact = document.querySelector('#contact');
+      const fixstar1 = document.querySelector('#fixStar1 a');
+      const fixstar2 = document.querySelector('#fixStar2 a');
+      const fixstar3 = document.querySelector('#fixStar3 a'); 
+
+      // console.log(contact.offsetTop);//4649
+
+      if (scrollY >= skill.offsetTop) {
+        fixstar1.classList.add('fixation');
+        if(scrollY >= project.offsetTop - 500) {
+          fixstar2.classList.add('fixation');
+          fixstar1.classList.remove('fixation');
+          if(scrollY >= contact.offsetTop - 500) {
+            fixstar3.classList.add('fixation');
+            fixstar2.classList.remove('fixation');
+          } else {
+            fixstar3.classList.remove('fixation');
+          }
+        } else {
+          fixstar2.classList.remove('fixation');
+        }
+      } else {
+        fixstar1.classList.remove('fixation');
+      }
+    })   
+
+
+    
+  
   })();
 
   /* 스크롤시 로고/이메일 줄어들음 */
@@ -180,30 +211,36 @@ window.onload = function init(){
   let img2 = document.querySelector('#img2');
   let img3 = document.querySelector('#img3');
   let img4 = document.querySelector('#img4');
+  let txt1 = document.querySelector('.txt1');
+  let txt2 = document.querySelector('.txt2');
+  let txt3 = document.querySelector('.txt3');
+  let txt4 = document.querySelector('.txt4');
 
-
+  
 
   addEventListener('scroll', () => {
     // console.log(scrollY);
-    if(scrollY > 2490) {
+    // console.log(project2.offsetTop);
+    console.log(ImgBox.offsetTop);
+    console.log(txt1.offsetTop);
+    console.log(txt2.offsetTop);
+    console.log(txt3.offsetTop);
+    console.log(txt4.offsetTop);
+
+
+    if(ImgBox.offsetTop > txt1.offsetTop) {
       ImgBox.style.transform = 'translateY(0)';
       ImgBox.style.opacity = '1';
-      if(scrollY >= 2510) {
+      if(ImgBox.offsetTop >= txt1.offsetTop - 300) {
         img1.style.opacity = '1';
-        if(scrollY >= 3064) {
+        if(ImgBox.offsetTop >= txt2.offsetTop - 200) {
           img2.style.opacity = '1';
-          if(scrollY >= 3550) {
+          if(ImgBox.offsetTop >= txt3.offsetTop -200) {
             img3.style.opacity = '1';
-            if(scrollY >= 3970) {
+            if(ImgBox.offsetTop >= txt4.offsetTop -200) {
               img4.style.opacity = '1';
-              if(scrollY >= 4375) {
-                ImgBox.style.position = 'none';
-                ImgBox.style.transform = 'translateY(150px)';
-                if (scrollY > 4400) {
-                  ImgBox.style.opacity = '0';
-                } 
-              } else {
-                ImgBox.style.opacity = '1';
+              if(ImgBox.offsetTop > txt4.offsetTop) {
+                ImgBox.style.opacity = '0';
               }
             } else {
               img4.style.opacity = '0';
@@ -218,9 +255,8 @@ window.onload = function init(){
         img1.style.opacity = '0';
       }
     } else {
-      ImgBox.style.transform = 'translateY(-150px)';
       ImgBox.style.opacity = '0';
-      img1.style.opacity = '0';
+      ImgBox.style.transform = 'translateY(-150px)';
     }
   })
 
