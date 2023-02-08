@@ -7,7 +7,7 @@ window.onload = function init(){
     let opacity = ["opacity1", "opacity1", "opacity1", "opacity2", "opacity2", "opacity3"];
     
     function getRandomArbitrary(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
     let estrela = "";
@@ -15,9 +15,6 @@ window.onload = function init(){
     let body = document.querySelector(".constelacao");
     let widthWindow = document.documentElement.clientWidth;
     let heightWindow = document.body.clientHeight;
-/*     console.log(heightWindow);
-    console.log(body);
-    console.log(widthWindow); */
 
     
     for (let i = 0; i < qtdeEstrelas; i++) {
@@ -74,8 +71,6 @@ window.onload = function init(){
       const fixstar2 = document.querySelector('#fixStar2 a');
       const fixstar3 = document.querySelector('#fixStar3 a'); 
 
-      // console.log(contact.offsetTop);//4649
-
       if (scrollY >= skill.offsetTop) {
         fixstar1.classList.add('fixation');
         if(scrollY >= project.offsetTop - 500) {
@@ -94,10 +89,6 @@ window.onload = function init(){
         fixstar1.classList.remove('fixation');
       }
     })   
-
-
-    
-  
   })();
 
   /* 스크롤시 로고/이메일 줄어들음 */
@@ -184,7 +175,6 @@ window.onload = function init(){
     let proH2 = document.querySelector('.proH2');
 
     addEventListener('scroll', () => {
-      /* console.log(scrollY); */
       if(scrollY > 1990) {
         proH2.style.opacity = '1'
         if(scrollY >= 2200) {
@@ -219,8 +209,6 @@ window.onload = function init(){
   
 
   addEventListener('scroll', () => {
-    // console.log(scrollY);
-    // console.log(project2.offsetTop);
     console.log(ImgBox.offsetTop);
     console.log(txt1.offsetTop);
     console.log(txt2.offsetTop);
@@ -259,9 +247,6 @@ window.onload = function init(){
       ImgBox.style.transform = 'translateY(-150px)';
     }
   })
-
-
-
   })();
 
 
