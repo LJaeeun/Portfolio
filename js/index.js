@@ -209,11 +209,11 @@ window.onload = function init(){
   
 
   addEventListener('scroll', () => {
-    console.log(ImgBox.offsetTop);
+    /* console.log(ImgBox.offsetTop);
     console.log(txt1.offsetTop);
     console.log(txt2.offsetTop);
     console.log(txt3.offsetTop);
-    console.log(txt4.offsetTop);
+    console.log(txt4.offsetTop); */
 
 
     if(ImgBox.offsetTop > txt1.offsetTop) {

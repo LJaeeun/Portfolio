@@ -7,8 +7,8 @@ html {
         height: 0;
     }
     scroll-behavior: smooth;
-}
 
+}
 body {
     /* 마우스 커서 */
     cursor: none;
@@ -28,7 +28,7 @@ body {
         }
     } 
     /* 전체 기본 폰트 */
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-family: 'Pretendard', sans-serif;
     /* 기본 색상 */
     color: #FFFFFF;
     /* 배경 이미지 */
@@ -249,8 +249,7 @@ body {
             }
             .skillbox {
                 margin: 6.510vw 5.208vw 0;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                display: flex;
                 font-weight: 100;
                 position: relative;
                 justify-content: center;
@@ -266,10 +265,10 @@ body {
                 .star {
                     position: sticky;
                     top: 0px;
-                    height: 850px;
+                    height: 800px;
                     display: grid;
-                    grid-template-columns: repeat(3, 0.28fr);
-                    grid-auto-rows: 0.3fr;
+                    grid-template-columns: repeat(3, 200px);
+                    grid-auto-rows: 250px;
                     justify-content: flex-end;
                     /* 별자리 부분 글자 */
                     p {
@@ -294,22 +293,22 @@ body {
                         .starBox {
                             .HStar1 {
                                 position: absolute;
-                                top: 20px;
-                                left: 5px;
+                                top: 25px;
+                                left: 7px;
                             }
                             .HStar2 {
                                 position: absolute;
-                                top: 65px;
+                                top: 67px;
                                 left: 8px;
                             }
                             .HStar3 {
                                 position: absolute;
-                                top: 130px;
+                                top: 127px;
                                 left: 9px;
                             }   
                             .HStar4 {
                                 position: absolute;
-                                top: 14px;
+                                top: 19px;
                                 left: 79px;
                             }  
                             .HStar5 {
@@ -320,7 +319,7 @@ body {
                             .HStar6 {
                                 position: absolute;
                                 top: 120px;
-                                left: 79px;
+                                left: 78px;
                             }
                         }
                     }
@@ -333,23 +332,23 @@ body {
                         }
                         .JStar1 {
                             position: absolute;
-                            top: 20px;
+                            top: 30px;
                             left: 45px;
                         }
                         .JStar2 {
                             position: absolute;
                             top: 70px;
-                            left: 48.5px;
+                            left: 49px;
                         }
                         .JStar3 {
                             position: absolute;
-                            top: 100px;
-                            left: 47px;
+                            top: 98px;
+                            left: 48px;
                         }
                         .JStar4 {
                             position: absolute;
                             top: 120px;
-                            left: 26px;
+                            left: 27px;
                         }
                         .JStar5 {
                             position: absolute;
@@ -366,23 +365,23 @@ body {
                         }
                         .RStar1 {
                             position: absolute;
-                            top: 20px;
-                            left: 5px;
+                            top: 25px;
+                            left: 7px;
                         }
                         .RStar2 {
                             position: absolute;
-                            top: 24px;
-                            left: 49px;
+                            top: 25px;
+                            left: 45px;
                         }
                         .RStar3 {
                             position: absolute;
-                            top: 55px;
+                            top: 50px;
                             left: 67px;
                         }
                         .RStar4 {
                             position: absolute;
                             top: 72px;
-                            left: 45px;
+                            left: 46px;
                         }
                         .RStar5 {
                             position: absolute;
@@ -720,23 +719,32 @@ body {
     /* footer */
     footer {
         .contact {
+            // height: 900px;
             .pos {
                 position: relative;
-                height: 900px;
+                height: 850px;
+                @media (max-width:1500px),(max-height: 900px) {
+                    height: 750px;
+                    h2 {
+                        padding-top: 50px;
+                    }
+                }
                 h2 {
                     padding-top: 0;
                 }
                 /* contact 메인 */
                 .contactflex {
-                    height: 700px;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    height: 31.250vw;
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
                     /* 별자리 */
                     .staricon {
                         position: relative;
-                        width: 400px; 
-                        height: 500px;
+                        width: 20.833vw; 
+                        height: 26.042vw;
                         margin-right: 200px;
                         /* 별모양 아이콘 포지션 */
                         .icon {
@@ -905,7 +913,7 @@ body {
                     .rotateLetter {
                         font-size: 2.188rem;
                         position: absolute;
-                        bottom: 3.646vw;
+                        bottom: 3vw;
                         left: 1.042vw;
                         letter-spacing: 10px;
                         font-family: "MonoplexKR", sans-serif;

@@ -14,7 +14,7 @@ body {
   /* 마우스 커서 */
   cursor: none;
   /* 전체 기본 폰트 */
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard", sans-serif;
   /* 기본 색상 */
   color: #FFFFFF;
   /* 배경 이미지 */
@@ -274,8 +274,7 @@ body main .skill .skillH2 {
 }
 body main .skill .skillbox {
   margin: 6.51vw 5.208vw 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   font-weight: 100;
   position: relative;
   justify-content: center;
@@ -295,10 +294,10 @@ body main .skill .skillbox span strong {
 body main .skill .skillbox .star {
   position: sticky;
   top: 0px;
-  height: 850px;
+  height: 800px;
   display: grid;
-  grid-template-columns: repeat(3, 0.28fr);
-  grid-auto-rows: 0.3fr;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: 250px;
   justify-content: flex-end;
   /* 별자리 부분 글자 */
   /* 별자리 토대 글자 */
@@ -328,22 +327,22 @@ body main .skill .skillbox .star .HBox p {
 }
 body main .skill .skillbox .star .HBox .starBox .HStar1 {
   position: absolute;
-  top: 20px;
-  left: 5px;
+  top: 25px;
+  left: 7px;
 }
 body main .skill .skillbox .star .HBox .starBox .HStar2 {
   position: absolute;
-  top: 65px;
+  top: 67px;
   left: 8px;
 }
 body main .skill .skillbox .star .HBox .starBox .HStar3 {
   position: absolute;
-  top: 130px;
+  top: 127px;
   left: 9px;
 }
 body main .skill .skillbox .star .HBox .starBox .HStar4 {
   position: absolute;
-  top: 14px;
+  top: 19px;
   left: 79px;
 }
 body main .skill .skillbox .star .HBox .starBox .HStar5 {
@@ -354,7 +353,7 @@ body main .skill .skillbox .star .HBox .starBox .HStar5 {
 body main .skill .skillbox .star .HBox .starBox .HStar6 {
   position: absolute;
   top: 120px;
-  left: 79px;
+  left: 78px;
 }
 body main .skill .skillbox .star .JBox {
   justify-self: center;
@@ -365,23 +364,23 @@ body main .skill .skillbox .star .JBox p {
 }
 body main .skill .skillbox .star .JBox .JStar1 {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 45px;
 }
 body main .skill .skillbox .star .JBox .JStar2 {
   position: absolute;
   top: 70px;
-  left: 48.5px;
+  left: 49px;
 }
 body main .skill .skillbox .star .JBox .JStar3 {
   position: absolute;
-  top: 100px;
-  left: 47px;
+  top: 98px;
+  left: 48px;
 }
 body main .skill .skillbox .star .JBox .JStar4 {
   position: absolute;
   top: 120px;
-  left: 26px;
+  left: 27px;
 }
 body main .skill .skillbox .star .JBox .JStar5 {
   position: absolute;
@@ -397,23 +396,23 @@ body main .skill .skillbox .star .RBox p {
 }
 body main .skill .skillbox .star .RBox .RStar1 {
   position: absolute;
-  top: 20px;
-  left: 5px;
+  top: 25px;
+  left: 7px;
 }
 body main .skill .skillbox .star .RBox .RStar2 {
   position: absolute;
-  top: 24px;
-  left: 49px;
+  top: 25px;
+  left: 45px;
 }
 body main .skill .skillbox .star .RBox .RStar3 {
   position: absolute;
-  top: 55px;
+  top: 50px;
   left: 67px;
 }
 body main .skill .skillbox .star .RBox .RStar4 {
   position: absolute;
   top: 72px;
-  left: 45px;
+  left: 46px;
 }
 body main .skill .skillbox .star .RBox .RStar5 {
   position: absolute;
@@ -732,25 +731,36 @@ body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .c
 }
 body footer .contact .pos {
   position: relative;
-  height: 900px;
+  height: 850px;
   /* contact 메인 */
   /* 옆으로 움직이는 글자 */
+}
+@media (max-width: 1500px), (max-height: 900px) {
+  body footer .contact .pos {
+    height: 750px;
+  }
+  body footer .contact .pos h2 {
+    padding-top: 50px;
+  }
 }
 body footer .contact .pos h2 {
   padding-top: 0;
 }
 body footer .contact .pos .contactflex {
-  height: 700px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 31.25vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* 별자리 */
   /* 간단 소개 */
 }
 body footer .contact .pos .contactflex .staricon {
   position: relative;
-  width: 400px;
-  height: 500px;
+  width: 20.833vw;
+  height: 26.042vw;
   margin-right: 200px;
   /* 별모양 아이콘 포지션 */
   /* 별자리 직선 포지션 */
@@ -922,7 +932,7 @@ body footer .contact .pos .rotateL {
 body footer .contact .pos .rotateL .rotateLetter {
   font-size: 2.188rem;
   position: absolute;
-  bottom: 3.646vw;
+  bottom: 3vw;
   left: 1.042vw;
   letter-spacing: 10px;
   font-family: "MonoplexKR", sans-serif;
