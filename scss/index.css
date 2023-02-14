@@ -647,6 +647,11 @@ body main .project .projectbox .imgbox .img {
 body main .project .projectbox .imgbox .img img {
   display: block;
   width: 100%;
+  height: 100%;
+}
+body main .project .projectbox .imgbox #img4 img {
+  height: 367px;
+  object-fit: cover;
 }
 body main .project .projectbox .textbox {
   width: 40%;
@@ -728,6 +733,18 @@ body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .c
   border: 0.052vw solid #fff;
   border-radius: 50%;
   margin-right: 0.625vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color13 {
+  background-color: #fff;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color14 {
+  background-color: #FFE600;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color15 {
+  background-color: #674563;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color16 {
+  background-color: #332b50;
 }
 body footer .contact .pos {
   position: relative;
