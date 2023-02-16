@@ -10,6 +10,18 @@ html::-webkit-scrollbar {
   height: 0;
 }
 
+/* form 팝업시 html에 붙음 */
+.popupOpen {
+  height: 100%;
+  overflow-y: hidden;
+  touch-action: none;
+}
+
+/* form 팝업시 #ClickForm에 붙음 */
+.displayNone {
+  display: none;
+}
+
 body {
   /* 마우스 커서 */
   cursor: none;
@@ -35,7 +47,7 @@ body .cursor .cursor__ball {
   top: 0;
   left: 0;
   mix-blend-mode: color-dodge;
-  z-index: 1;
+  z-index: 9999999999999;
 }
 body .cursor .cursor__ball svg circle {
   fill: rgba(255, 255, 255, 0.3);
@@ -650,7 +662,7 @@ body main .project .projectbox .imgbox .img img {
   height: 100%;
 }
 body main .project .projectbox .imgbox #img4 img {
-  height: 367px;
+  height: 19.115vw;
   object-fit: cover;
 }
 body main .project .projectbox .textbox {
@@ -745,6 +757,133 @@ body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .c
 }
 body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color16 {
   background-color: #332b50;
+}
+body footer {
+  /* form */
+}
+body footer #ClickForm {
+  position: fixed;
+  z-index: 999999999;
+  width: 400px;
+  height: 400px;
+  bottom: 240px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+}
+body footer #ClickForm form {
+  border: 1px solid #C4CFFF;
+  background-color: #C4CFFF;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: none;
+}
+body footer #ClickForm form .thankyou_message {
+  position: absolute;
+  bottom: 40px;
+  right: 130px;
+  width: 240px;
+  height: 10px;
+}
+body footer #ClickForm form .thankyou_message h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+body footer #ClickForm form button {
+  border: none;
+  background-color: transparent;
+  font-weight: 300;
+  color: #fff;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  font-family: "MonoplexKR", sans-serif;
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  height: 30px;
+  font-size: 1.2rem;
+  width: 240px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  cursor: none;
+}
+body footer #ClickForm form button:hover {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #332b50;
+  border: none;
+}
+body footer #ClickForm form .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+body footer #ClickForm form .box label {
+  cursor: none;
+  align-items: center;
+  margin-bottom: 20px;
+}
+body footer #ClickForm form .box label textarea:focus, body footer #ClickForm form .box label input:focus {
+  outline: none;
+}
+body footer #ClickForm form .box label input {
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  cursor: none;
+}
+body footer #ClickForm form .box label textarea {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  resize: none;
+  cursor: none;
+}
+body footer #ClickForm form .box label:first-child, body footer #ClickForm form .box label:nth-child(2) {
+  display: flex;
+}
+body footer #ClickForm form .box label:first-child p, body footer #ClickForm form .box label:nth-child(2) p {
+  margin-right: 20px;
+}
+body footer #ClickForm form .box label:nth-child(2) {
+  margin-top: 10px;
+}
+body footer #ClickForm form .box label:nth-child(2) p {
+  margin-right: 18.5px;
+}
+body footer #ClickForm form .box label:last-child {
+  margin-top: 10px;
+}
+body footer #ClickForm form .box label:last-child p {
+  margin-bottom: 5px;
+}
+body footer #ClickForm form .closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: url(../imgs/indexIMG/star-solid.svg) no-repeat 50%/cover;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+body footer #ClickForm form .closeBtn:hover {
+  transform: rotate(180deg);
+  width: 40px;
+  height: 40px;
+}
+@media (max-height: 937px) {
+  body footer #ClickForm {
+    bottom: 200px;
+  }
 }
 body footer .contact .pos {
   position: relative;

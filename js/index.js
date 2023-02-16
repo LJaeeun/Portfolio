@@ -249,6 +249,27 @@ window.onload = function init(){
   })
   })();
 
+  (function ClickEmail() {
+    const emailClick1 = document.querySelector('.formOpen1');
+    const emailClick2 = document.querySelector('.formOpen2');
+    const emailClose = document.querySelector('.closeBtn');
+    const html = document.querySelector('body');
+    const EmailOpen = document.querySelector('#ClickForm');
+
+    emailClick1.addEventListener('click', () => {
+      html.classList.add('popupOpen');
+      EmailOpen.classList.remove('displayNone');
+    })
+    emailClick2.addEventListener('click', () => {
+      html.classList.add('popupOpen');
+      EmailOpen.classList.remove('displayNone');
+    })
+    emailClose.addEventListener('click', () => {
+      html.classList.remove('popupOpen');
+      EmailOpen.classList.add('displayNone')
+    })
+
+  })();
 
 }
 
