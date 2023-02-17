@@ -662,7 +662,7 @@ body main .project .projectbox .imgbox .img img {
   height: 100%;
 }
 body main .project .projectbox .imgbox #img4 img {
-  height: 19.115vw;
+  height: 17.715vw;
   object-fit: cover;
 }
 body main .project .projectbox .textbox {
@@ -745,6 +745,42 @@ body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .c
   border: 0.052vw solid #fff;
   border-radius: 50%;
   margin-right: 0.625vw;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color1 {
+  background-color: #fff;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color2 {
+  background-color: #cbddff;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color3 {
+  background-color: #003DAB;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color4 {
+  background-color: #000;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color5 {
+  background-color: #fff;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color6 {
+  background-color: #e94e58;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color7 {
+  background-color: #31a552;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color8 {
+  background-color: #004e5f;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color9 {
+  background-color: #f7f6f3;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color10 {
+  background-color: #fbb19a;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color11 {
+  background-color: #ff4713;
+}
+body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color12 {
+  background-color: rgba(255, 71, 19, 0.6);
 }
 body main .project .projectbox .textbox .projectText .tagbox .color .colorbox .color13 {
   background-color: #fff;
