@@ -24,7 +24,10 @@ window.onload = function init(){
     }
     
     body.innerHTML = estrela;
+    addEventListener('resize', bg)
   })();
+
+  
 
   /* 마우스 커서 커스텀 */
   (function corsor() {
@@ -209,11 +212,12 @@ window.onload = function init(){
   
 
   addEventListener('scroll', () => {
-    /* console.log(ImgBox.offsetTop);
-    console.log(txt1.offsetTop);
-    console.log(txt2.offsetTop);
-    console.log(txt3.offsetTop);
-    console.log(txt4.offsetTop); */
+    // console.log(ImgBox.offsetTop);
+    console.log(ImgBox.scrollTop);
+    // console.log(txt1.offsetTop);
+    // console.log(txt2.offsetTop);
+    // console.log(txt3.offsetTop);
+    // console.log(txt4.offsetTop);
 
 
     if(ImgBox.offsetTop > txt1.offsetTop) {
@@ -253,7 +257,7 @@ window.onload = function init(){
     const emailClick1 = document.querySelector('.formOpen1');
     const emailClick2 = document.querySelector('.formOpen2');
     const emailClose = document.querySelector('.closeBtn');
-    const html = document.querySelector('body');
+    const html = document.querySelector('html');
     const EmailOpen = document.querySelector('#ClickForm');
 
     emailClick1.addEventListener('click', () => {
