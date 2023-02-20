@@ -7,13 +7,13 @@ window.onload = function init(){
     let opacity = ["opacity1", "opacity1", "opacity1", "opacity2", "opacity2", "opacity3"];
     
     function getRandomArbitrary(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+      return Math.floor(Math.random() * (max - min)) + min;
     }
     
     let estrela = "";
     let qtdeEstrelas = 650;
     let body = document.querySelector(".constelacao");
-    let widthWindow = document.documentElement.clientWidth;
+    let widthWindow = document.body.clientWidth;
     let heightWindow = document.body.clientHeight;
 
     
