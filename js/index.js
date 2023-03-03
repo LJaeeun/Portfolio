@@ -24,7 +24,7 @@ window.onload = function init(){
     }
     
     body.innerHTML = estrela;
-    addEventListener('resize', bg)
+    addEventListener('resize', bg);
   })();
 
   

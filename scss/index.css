@@ -4,6 +4,7 @@ html {
   position: relative;
   /* 스크롤바 */
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar {
   width: 0;
@@ -52,11 +53,10 @@ body .cursor .cursor__ball {
   position: absolute;
   top: 0;
   left: 0;
-  mix-blend-mode: color-dodge;
   z-index: 9999999999999;
 }
 body .cursor .cursor__ball svg circle {
-  fill: rgba(255, 255, 255, 0.3);
+  fill: rgba(255, 255, 255, 0.3) !important;
 }
 body .constelacao {
   background: url(../imgs/indexIMG/bg.png) no-repeat 50%/cover;
@@ -678,7 +678,7 @@ body main .project .projectbox .imgbox #img4 img {
   object-fit: cover;
 }
 body main .project .projectbox .textbox {
-  width: 40%;
+  width: 45%;
   margin-left: auto;
 }
 body main .project .projectbox .textbox .projectText {
@@ -698,6 +698,7 @@ body main .project .projectbox .textbox .projectText .borderbox ul li {
   padding: 0.26vw 0.469vw;
   margin-right: 0.521vw;
   font-size: 0.75rem;
+  white-space: nowrap;
 }
 body main .project .projectbox .textbox .projectText .titlebox {
   display: flex;
@@ -707,8 +708,9 @@ body main .project .projectbox .textbox .projectText .titlebox {
   /* 날짜 */
 }
 body main .project .projectbox .textbox .projectText .titlebox h3 {
-  font-size: 2.375rem;
+  font-size: 2rem;
   margin-right: 0.729vw;
+  white-space: nowrap;
 }
 body main .project .projectbox .textbox .projectText .titlebox p {
   font-size: 0.75rem;
@@ -731,10 +733,11 @@ body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox {
 }
 body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox a {
   font-size: 1.125rem;
-  margin-right: 0.625vw;
+  margin-right: 1vw;
   transition: 0.3s;
   position: relative;
   z-index: 99;
+  white-space: nowrap;
 }
 body main .project .projectbox .textbox .projectText .tagbox .tag .alinkbox a:last-child {
   margin-right: 0;

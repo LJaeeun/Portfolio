@@ -7,6 +7,7 @@ html {
         height: 0;
     }
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 html, body {
     font-size: 16px;
@@ -33,11 +34,11 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            mix-blend-mode: color-dodge;
+            // mix-blend-mode: color-dodge !important;
             z-index: 9999999999999;
             svg {
                 circle {
-                    fill: rgba(255, 255, 255,0.3);
+                    fill: rgba(255, 255, 255,0.3) !important;
                 }
             }
         }
@@ -658,7 +659,7 @@ body {
                 }
                 /* 텍스트 박스 */
                 .textbox {
-                    width: 40%;
+                    width: 45%;
                     margin-left: auto;
                     .projectText {
                         display: flex;
@@ -674,6 +675,7 @@ body {
                                     padding: 0.260vw 0.469vw;
                                     margin-right: 0.521vw;
                                     font-size: 0.75rem;
+                                    white-space: nowrap;
                                 }
                             }
                         }
@@ -684,8 +686,9 @@ body {
                             margin-bottom: 1.302vw;
                             /* 제목 */
                             h3 {
-                                font-size: 2.375rem;
+                                font-size: 2rem;
                                 margin-right: 0.729vw;
+                                white-space: nowrap;
                             }
                             /* 날짜 */
                             p {
@@ -707,10 +710,11 @@ body {
                                     display: flex;
                                     a {
                                         font-size: 1.125rem;
-                                        margin-right: 0.625vw;
+                                        margin-right: 1vw;
                                         transition: .3s;
                                         position: relative;
                                         z-index: 99;
+                                        white-space: nowrap;
                                         &:last-child {
                                             margin-right: 0;
                                         }
